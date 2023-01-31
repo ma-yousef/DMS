@@ -1,0 +1,73 @@
+﻿@using System.Web
+@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <title>نظام إدارةالوثائق</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/scripts/head")
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+    @if (Request.IsAuthenticated)
+    { 
+        <script src="~/Scripts/es5-shim.min.js"></script>
+        <script src="~/Scripts/es5-sham.min.js"></script>
+    }
+</head>
+<body>
+    @Scripts.Render("~/scripts/vendor")
+    @if (Request.IsAuthenticated)
+    {
+        <div id="applicationHost">
+            @Html.Partial("_splash")
+        </div>
+        
+        if (HttpContext.Current.IsDebuggingEnabled)
+        {
+        <script type="text/javascript" src="~/App/durandal/amd/require.js" data-main="@Url.Content("~/App/main")"></script>
+        }
+        else
+        {
+        <!-- Remember to run the Durandal optimizer.exe to create the main-built.js  -->
+        <script type="text/javascript" src="~/App/main-built.js"></script>
+        }
+        
+        <script type="text/html" id="department-template">
+            <li>
+                <div>
+                    <i data-bind="attr: { class: Department1().length > 0 ? 'icon-minus-sign' : 'icon-minus' }" style="margin-top:3px;" ></i>
+                    <span data-bind="text: Name"></span>
+                    <a style="float:left;border-right: 1px solid #ccc; padding-right:5px;" data-toggle="modal" href="#modalAddDepartment" data-bind="click: $root.addNewDept.bind(1) "><i class="icon-plus" style="margin-top:2px;"></i></a>
+                    <a style="float:left;border-right: 1px solid #ccc; padding-right:5px;" data-toggle="modal" href="#modalEditDepartment" data-bind="click: $root.openEditDepartment.bind(1)"><i class="icon-edit" style="margin-left:10px; margin-right:10px; margin-top: 2px;"></i></a>
+                    <span style="float:left;" >
+                        <input type="checkbox" data-bind="checked: Active" style="margin-left:5px;" />
+                    </span>
+                </div>
+                <!--ko if: Department1().length > 0 -->
+                <ul data-bind="template: { name: 'department-template', foreach: Department1 }">
+                </ul>
+                <!--/ko-->
+            </li>
+        </script>
+    }
+    else
+    {
+        @Html.Partial("_login")
+        @Scripts.Render("~/App/ajaxlogin")
+    }
+</body>
+</html>

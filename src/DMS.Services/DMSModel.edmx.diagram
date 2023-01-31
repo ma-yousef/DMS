@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2acf7b43015b4082a3ead50f0abc02a9" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="DMSModel.DepartmentType" Width="1.5" PointX="8.7204344145583157" PointY="11.014564295771795" />
+        <EntityTypeShape EntityType="DMSModel.DirectionType" Width="1.5" PointX="4.1338929497329024" PointY="6.1179680554745568" />
+        <EntityTypeShape EntityType="DMSModel.DocumentHistory" Width="1.5" PointX="0.7163003686425744" PointY="26.825511766050713" />
+        <EntityTypeShape EntityType="DMSModel.DocumentProcedure" Width="1.5" PointX="3.6695905773293185" PointY="0.31164990380017549" />
+        <EntityTypeShape EntityType="DMSModel.DocumentStatus" Width="2.375" PointX="5.625" PointY="6.375" />
+        <EntityTypeShape EntityType="DMSModel.ImportanceLevel" Width="1.5" PointX="1.3686792260821346" PointY="13.795933059321685" />
+        <EntityTypeShape EntityType="DMSModel.Issue" Width="1.5" PointX="7.87662047700799" PointY="22.625158067152444" />
+        <EntityTypeShape EntityType="DMSModel.Nationality" Width="1.5" PointX="9.4750183827593073" PointY="0.45922161660120897" />
+        <EntityTypeShape EntityType="DMSModel.Procedure" Width="1.5" PointX="4.4495738802708562" PointY="15.843571521268958" />
+        <EntityTypeShape EntityType="DMSModel.ProcedureStatus" Width="1.375" PointX="4.5" PointY="7.25" />
+        <EntityTypeShape EntityType="DMSModel.Registry" Width="1.5" PointX="9.7112224594276491" PointY="2.1759869466423929" />
+        <EntityTypeShape EntityType="DMSModel.RelatedPerson" Width="1.5" PointX="1.3716662178615418" PointY="5.1870822334601927" />
+        <EntityTypeShape EntityType="DMSModel.RequiredProcedure" Width="1.5" PointX="8.7994828917083723" PointY="24.112053182028259" />
+        <EntityTypeShape EntityType="DMSModel.SecurityLevel" Width="1.5" PointX="0.58930649449550854" PointY="16.401911802777047" />
+        <EntityTypeShape EntityType="DMSModel.webpages_Membership" Width="1.5" PointX="3.25" PointY="24.25" />
+        <EntityTypeShape EntityType="DMSModel.webpages_OAuthMembership" Width="1.5" PointX="5.875" PointY="23.5" />
+        <EntityTypeShape EntityType="DMSModel.webpages_Roles" Width="1.5" PointX="5.7607152358445877" PointY="9.7477736965509934" />
+        <AssociationConnector Association="DMSModel.FK_DocumentHistory_DocumentStatus" />
+        <AssociationConnector Association="DMSModel.FK_DocumentProcedure_Procedure" />
+        <AssociationConnector Association="DMSModel.FK_DocumentProcedure_ProcedureStatus" />
+        <AssociationConnector Association="DMSModel.FK_RelatedPerson_Nationality" />
+        <AssociationConnector Association="DMSModel.FK_RequiredProcedure_Procedure" />
+        <EntityTypeShape EntityType="DMSModel.Notification" Width="1.5" PointX="11.670583393271354" PointY="31.339501529624453" />
+        <EntityTypeShape EntityType="DMSModel.NotificationType" Width="1.5" PointX="0.3034992200804405" PointY="28.227701215179497" />
+        <AssociationConnector Association="DMSModel.FK_Notification_NotificationType" />
+        <EntityTypeShape EntityType="DMSModel.AttachmentType" Width="1.5" PointX="6.681660971921711" PointY="31.785538628597529" />
+        <EntityTypeShape EntityType="DMSModel.DocumentStatusReason" Width="1.5" PointX="2.6887263146642253" PointY="3.6861532645701214" />
+        <EntityTypeShape EntityType="DMSModel.DocumentType" Width="1.5" PointX="10.873801191744303" PointY="21.337995971244759" />
+        <AssociationConnector Association="DMSModel.FK_DocumentStatusReason_DocumentStatus" />
+        <EntityTypeShape EntityType="DMSModel.SentDocument" Width="1.5" PointX="0.695886561971105" PointY="22.186902488668871" />
+        <AssociationConnector Association="DMSModel.FK_SentDocument_DocumentStatus" />
+        <AssociationConnector Association="DMSModel.FK_SentDocument_DocumentStatusReason" />
+        <AssociationConnector Association="DMSModel.FK_RequiredProcedure_SentDocument" />
+        <EntityTypeShape EntityType="DMSModel.ReadOnlyDepartment" Width="1.5" PointX="2.526847965329349" PointY="10.202760686261001" />
+        <EntityTypeShape EntityType="DMSModel.ReadOnlyType" Width="1.5" PointX="7.0704469173543369" PointY="6.3601440071874036" />
+        <EntityTypeShape EntityType="DMSModel.ReadOnlyUser" Width="1.5" PointX="10.624796378717196" PointY="31.454522654160169" />
+        <AssociationConnector Association="DMSModel.FK_ReadOnlyDepartment_ReadOnlyType" />
+        <AssociationConnector Association="DMSModel.FK_ReadOnlyUser_ReadOnlyType" />
+        <EntityTypeShape EntityType="DMSModel.Document" Width="1.5" PointX="8.9307108227772218" PointY="16.684179656526158" />
+        <AssociationConnector Association="DMSModel.FK_Document_DirectionType" />
+        <AssociationConnector Association="DMSModel.FK_Document_Document" />
+        <AssociationConnector Association="DMSModel.FK_Document_DocumentStatus" />
+        <AssociationConnector Association="DMSModel.FK_Document_DocumentType" />
+        <AssociationConnector Association="DMSModel.FK_Document_ImportanceLevel" />
+        <AssociationConnector Association="DMSModel.FK_Document_Issue" />
+        <AssociationConnector Association="DMSModel.FK_Document_Registry" />
+        <AssociationConnector Association="DMSModel.FK_Document_SecurityLevel" />
+        <AssociationConnector Association="DMSModel.FK_DocumentHistory_Document" />
+        <AssociationConnector Association="DMSModel.FK_DocumentProcedure_Document" />
+        <AssociationConnector Association="DMSModel.FK_ReadOnlyDepartment_Document" />
+        <AssociationConnector Association="DMSModel.FK_ReadOnlyUser_Document" />
+        <AssociationConnector Association="DMSModel.FK_RelatedPerson_Document" />
+        <AssociationConnector Association="DMSModel.FK_SentDocument_Document" />
+        <EntityTypeShape EntityType="DMSModel.Attachment" Width="1.5" PointX="2.4546787675724735" PointY="9.5875260725559315" />
+        <AssociationConnector Association="DMSModel.FK_Attachment_AttachmentType" />
+        <AssociationConnector Association="DMSModel.FK_Attachment_Document" />
+        <EntityTypeShape EntityType="DMSModel.User" Width="1.5" PointX="11.925833042676484" PointY="19.064502039488637" />
+        <AssociationConnector Association="DMSModel.FK_Document_User" />
+        <AssociationConnector Association="DMSModel.FK_Document_User1" />
+        <AssociationConnector Association="DMSModel.FK_DocumentHistory_User" />
+        <AssociationConnector Association="DMSModel.FK_Notification_User" />
+        <AssociationConnector Association="DMSModel.FK_ReadOnlyUser_User" />
+        <AssociationConnector Association="DMSModel.FK_SentDocument_User" />
+        <AssociationConnector Association="DMSModel.FK_SentDocument_User1" />
+        <AssociationConnector Association="DMSModel.FK_User_Supervisor" />
+        <AssociationConnector Association="DMSModel.FK_webpages_Membership_User" />
+        <AssociationConnector Association="DMSModel.webpages_UsersInRoles" />
+        <EntityTypeShape EntityType="DMSModel.Department" Width="1.5" PointX="7.7858792616919983" PointY="16.136821575526529" />
+        <AssociationConnector Association="DMSModel.FK_Department_Department" />
+        <AssociationConnector Association="DMSModel.FK_Department_DepartmentType" />
+        <AssociationConnector Association="DMSModel.FK_Document_Department" />
+        <AssociationConnector Association="DMSModel.FK_Document_Department1" />
+        <AssociationConnector Association="DMSModel.FK_ReadOnlyDepartment_Department" />
+        <AssociationConnector Association="DMSModel.FK_User_Department" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

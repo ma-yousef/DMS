@@ -1,0 +1,27 @@
+﻿<div style="overflow:auto;">
+    <div >
+    <header>
+        <!--ko compose: {view: 'nav'} -->
+        <!--/ko-->
+        
+    </header>
+        </div>
+    <section id="content" class="main container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <!--ko compose: {view: 'sidenav'} -->
+                <!--/ko-->
+            </div>
+            <div class="span10">
+                <!--ko compose: {model: router.activeItem, 
+                                    afterCompose: router.afterCompose, 
+                                    transition: 'entrance'} -->
+                <!--/ko-->
+            </div>
+        </div>
+    </section>
+    <!--<footer>
+        <!--ko compose: {view: 'footer'} -->
+    <!--/ko-->
+    <!--</footer>-->
+</div>

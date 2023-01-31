@@ -1,0 +1,544 @@
+﻿<div id="document">
+    <!--ko if: documents() == null -->
+    <div class="well">
+        البيانات غير متوفره.
+    </div>
+    <!--/ko-->
+    <!--ko if: documents() != null -->
+    <div class="well">
+          <!-- ko if: documents().DirectionTypeId()==1 -->
+        <div class="btn-group">
+                        <!-- ko if: documents().DocumentStatusId() != 2 &&  documents().DocumentStatusId() != 9 &&  documents().DocumentStatusId() != 7 && $root.userRoles.indexOf(3) != -1-->
+                        <a class="btn" data-toggle="modal" href="#transferDocumentModal" data-bind="click: $root.opentransferDocumentModal, attr: { title: $root.locales.lnkTransfer }"><i class="icon-share-alt" style="margin-top: 2px;"></i></a>
+                        
+                        <!-- /ko -->
+                        <!-- ko if: documents().DocumentStatusId() != 2 &&  documents().DocumentStatusId() != 9 &&  documents().DocumentStatusId() != 7 && $root.userRoles.indexOf(6) != -1-->
+                        <a class="btn btn-warning" data-toggle="modal" href="#transferDocumentModalManager" data-bind="click: $root.opentransferDocumentModal, attr: { title: $root.locales.lnkTransfer }"><i class="icon-share-alt" style="margin-top: 2px;"></i></a>
+                        <!-- /ko -->
+                        <!-- ko if: documents().DocumentStatusId() != 7 && documents().DocumentStatusId() != 9 && documents().DocumentStatusId() != 2-->
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span data-bind="text: $root.locales.lnkActions"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <!-- ko if: documents().DocumentStatusId() == 1 || documents().DocumentStatusId() == 3-->
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 5), text: $root.locales.lnkOpen">مفتوح</a>
+                            </li>
+                            <!-- /ko -->
+                            <!-- ko if: documents().DocumentStatusId() == 5-->
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 7), text: $root.locales.lnkFinished">منجز</a>
+                            </li>
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 8), text: $root.locales.lnkPending">معلق</a>
+                            </li>
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 9), text: $root.locales.lnkClosed">مغلق</a>
+                            </li>
+                            <!-- /ko -->
+                            <!-- ko if: documents().DocumentStatusId() == 8 || documents().DocumentStatusId() == 4-->
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 5), text: $root.locales.lnkOpen">مفتوح</a>
+                            </li>
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 7), text: $root.locales.lnkFinished">منجز</a>
+                            </li>
+                            <li>
+                                <a href="#" data-bind="click: $root.changeStatus.bind($data, 9), text: $root.locales.lnkClosed">مغلق</a>
+                            </li>
+                            <!-- /ko -->
+                        </ul>
+                        <!-- /ko -->
+                    </div>
+        <!--/ko-->
+    </div>
+    <div class="well">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divDocumentInfo">معلومات القيد
+                </a>
+            </div>
+            <div id="divDocumentInfo" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <div class="form-horizontal form-row-seperated ">
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <!-- ko if: isIn() -->
+                                    <label class="control-label">رقم الوارد الداخلى: </label>
+                                    <!-- /ko -->
+                                    <!-- ko if: !isIn() -->
+                                    <label class="control-label">رقم الصادر الداخلى: </label>
+                                    <!-- /ko -->
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span2" data-bind="text: serial"></span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">نوع القيد: </label>
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span2" data-bind="text: documenttype"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">الرقم الموحد: </label>
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span2" data-bind="text: externalid"></span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <!-- ko if: isIn() -->
+                                    <label class="control-label">تاريخ الوارد: </label>
+                                    <!-- /ko -->
+                                    <!-- ko if: !isIn() -->
+                                    <label class="control-label">تاريخ الصادر: </label>
+                                    <!-- /ko -->
+
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span2" data-bind="date: documentdate"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <!-- ko if: isIn() -->
+                                    <label class="control-label">نوع الوارد: </label>
+
+                                    <!-- /ko -->
+                                    <!-- ko if: !isIn() -->
+                                    <label class="control-label">نوع الصادر: </label>
+                                    <!-- /ko -->
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span2" data-bind="text: registryid"></span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">درجة السرية: </label>
+                                    <div class="controls">
+                                        <div>
+                                            <span class="rounded readonly-text span2" data-bind="text: securityLevelsid"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <div class="control-group" style="margin-bottom: 0px;">
+                                        <!-- ko if: isIn() -->
+                                        <label class="control-label">جهة الوارد: </label>
+                                        <!-- /ko -->
+                                        <!-- ko if: !isIn() -->
+                                        <label class="control-label">جهة الصادر: </label>
+                                        <!-- /ko -->
+                                        <div class="controls">
+                                            <span class="rounded readonly-text span2" data-bind="text: departmentsin"></span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group" style="margin-bottom: 0px;">
+                                        <label class="control-label">الادارة المحال: </label>
+                                        <div class="controls">
+                                            <span class="rounded readonly-text span2" data-bind="text: departmentsout"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6 ">
+
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">مستوى الاهمية: </label>
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span2" class="rounded readonly-text span2" data-bind="text: importanceLevels"></span>
+                                    </div>
+                                </div>
+
+                                <label class="control-label" style="display: none;">انتهاء الصلاحية: </label>
+                                <div class="controls" style="display: none;">
+                                    <span class="rounded readonly-text span2" data-bind="text: expireDate"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">تحتاج الى رد: </label>
+                                    <div class="controls">
+                                        <div>
+                                            <input type="checkbox" name="colors" id="red" value="red" data-bind="checked: needResponse" disabled="disabled">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divIssue">الموضوع
+                </a>
+            </div>
+            <div id="divIssue" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="form-horizontal form-row-seperated ">
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="padding-right: 0px; margin-right: 0px; margin-left: 5px;">
+                                    <label class="control-label">الموضوع:</label>
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span6" data-bind="text: issueName"></span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">الايضاحات:</label>
+                                    <div class="controls">
+                                        <span class="rounded readonly-text span6" style="height:50px;" data-bind="text: notes"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divRelatedPersons">الأسماء</a>
+            </div>
+            <div id="divRelatedPersons" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <table class="table" style="margin-bottom: 0px;">
+                        <thead>
+                            <tr>
+                                <th>الاسم</th>
+                                <th>رقم الهوية</th>
+                                <th>الجنسية</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: personLines">
+                            <tr>
+                                <td style="">
+                                    <div class="control-group" style="padding-right: 0px; margin-right: 0px; margin-left: 5px;">
+                                        <span data-bind="text: Name"></span>
+                                    </div>
+                                </td>
+                                <td style="">
+                                    <span data-bind="text: NationalId"></span></td>
+                                <td style="">
+                                    <div class="control-group" style="padding-right: 0px; margin-right: 0px; margin-left: 5px;">
+                                        <span data-bind="text: Nationality().Name"></span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divAttachments">عرض الخطاب
+                </a>
+            </div>
+            <div id="divAttachments" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <table class="table" style="margin-bottom: 0px;">
+                        <thead>
+                            <tr>
+                                <th>أنواع الارشفة</th>
+                                <th>عدد الورقات</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: attachmentLine">
+                            <tr>
+                                <td style="">
+                                    <span data-bind="text: AttachmentType().Name"></span>
+                                </td>
+                                <td style="">
+                                    <span data-bind="text: Count"></span>
+                                </td>
+                                <td style="">
+                                    <span data-bind="text: Notes"></span>
+                                </td>
+                                <td>
+                                    <a class="btn" href="#modalViewAttachment" data-toggle="modal" data-bind="click: $root.showAttachment" title="عرض"><i class="icon-eye-open" style="margin-top: 2px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divAttachments1">عرض المشفوعات
+                </a>
+            </div>
+            <div id="divAttachments1" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <table class="table" style="margin-bottom: 0px;">
+                        <thead>
+                            <tr>
+                                <th>أنواع المشفوعات</th>
+                                <th>عدد الورقات</th>
+                                <th>ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: attachmentLine1">
+                            <tr>
+                                <td style="">
+                                    <span data-bind="text: AttachmentType().Name"></span>
+                                </td>
+                                <td style="">
+                                    <span data-bind="text: Count"></span>
+                                </td>
+                                <td style="">
+                                    <span data-bind="text: Notes"></span>
+                                </td>
+                                <td>
+                                    <a class="btn" href="#modalViewAttachment" data-toggle="modal" data-bind="click: $root.showAttachment" title="عرض"><i class="icon-eye-open" style="margin-top: 2px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- ko if: isRelation()-->
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divRelatedDocuments">عرض الوثائق المرتبطة
+                </a>
+            </div>
+            <div id="divRelatedDocuments" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>رقم القيد</th>
+                                <th>التاريخ</th>
+                                <th>سجل القيد</th>
+                                <th>رقم القيد الخارجى</th>
+                                <!-- ko if: isIn() -->
+                                <th>جهة الوارد</th>
+                                <!-- /ko -->
+                                <!-- ko if: !isIn() -->
+                                <th>جهة الصادر</th>
+                                <!-- /ko -->
+                                <th>الموضوع</th>
+                                <th>الحاله</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: documentRelation">
+                            <tr>
+                                <td data-bind="text: Serial"></td>
+                                <td data-bind="date: Date"></td>
+                                <td data-bind="text: Registry().Name"></td>
+                                <td data-bind="text: ExternalId"></td>
+                                <td data-bind="text: Department().Name"></td>
+                                <td data-bind="text: Issue().Name"></td>
+                                <td data-bind="text: DocumentStatus().Name"></td>
+                                <td>
+                                    <a class="btn" data-bind="click: $root.showDocumentRelated" title="عرض القيد"><i class="icon-eye-open" style="margin-top: 2px;"></i>
+                                    </a>
+                                </td>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- /ko -->
+    </div>
+    <!--/ko-->
+</div>
+
+<div class="modal hide fade" id="modalViewAttachment" style="width: 1000px; right: 35%; top: 40%; height: 630px;">
+    <div class="modal-header">
+        <button type="button" class="close modalEditDocumentClose" id="closeModal" data-dismiss="modal">x</button>
+        <h3><i class="icon-eye-open" style="vertical-align: baseline; margin-left: 5px;"></i>عرض الوثيقة</h3>
+    </div>
+    <div class="modal-body" style="height: 520px; max-height: none; overflow: hidden;">
+        <iframe id="attach" style="height: 99%; width: 100%;"></iframe>
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>
+
+<div class="modal hide fade" id="transferDocumentModal" style="width: 650px;">
+    <div class="modal-header">
+        <button id="closeTransferDocument" type="button" class="close" data-dismiss="modal">x</button>
+        <h3><i class="icon-user" style="vertical-align: baseline; margin-left: 5px;"></i>
+            <span data-bind="text: locales.modalTransferDocumentTitle"></span>
+            <span> - الرقم الموحد:  </span><span data-bind="text: uniqenumber"></span>
+        </h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="span6 ">
+                <div class="control-group" data-bind="css: { 'error': selectedDepartment() == null }">
+                    <select class="span3" data-bind="options: departmentList, optionsText: 'Name', value: selectedDepartment, optionsCaption: locales.lstTransferDepartmentCaption, event: { change: getSuer }">
+                    </select>
+                    <div class="control-group" data-bind="css: { 'error': selectedDepartmentUser() == null }">
+                        <select class="span3" data-bind="options: departmentUsersList, optionsText: 'Name', value: selectedDepartmentUser, optionsCaption: locales.lstDepartmentUsersCaption">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="span6 ">
+                <textarea data-bind="value: transferNotes, attr: { placeholder: locales.txtNotes }" style="width: 98%; height: 55px;"></textarea>
+            </div>
+        </div>
+
+        <div class="row-fluid" data-bind="style: { display: reasons().length > 0 ? 'block' : 'none' }">
+            <div class="span12 ">
+                <div class="control-group">
+                    <select class="span3" data-bind="options: reasons, optionsText: 'Reason', value: selectedReason, optionsCaption: locales.lstReasonsCaption">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-parent="#accordion2" data-bind="text: locales.lblRequiredProcedures">
+                </a>
+            </div>
+            <div id="divReadOnly" class="accordion-body expand">
+                <div class="accordion-inner">
+                    <div class="row-fluid">
+                        <div class="span12 ">
+                            <div>
+                                <select id="ProcedureList" data-bind="options: internalProcedureList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: locales.lstProceduresCaption"></select>
+                                <button type="button" class="btn" style="margin-top: -10px;" data-bind="click: addProcedure"><i class="icon-plus"></i></button>
+                            </div>
+                            <div style="height: 180px; padding: 5px; overflow-y: auto; border: 1px solid #dddddd; background-color: #fff;" data-bind="foreach: documentProcedure">
+                                <div class="rounded" style="margin-bottom: 4px;">
+                                    <span data-bind="text: Procedure().Name"></span>
+                                    <span class="left-close" data-bind="click: $root.removeProcedure">
+                                        <i class="icon-remove"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: saveTransferDocument, text: locales.btnSaveTransfer"><i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>
+<div class="modal hide fade" id="transferDocumentModalManager" style="width: 650px;">
+    <div class="modal-header">
+        <button id="Button1" type="button" class="close" data-dismiss="modal">x</button>
+        <h3><i class="icon-user" style="vertical-align: baseline; margin-left: 5px;"></i>
+            <span data-bind="text: locales.modalTransferDocumentTitle"></span>
+            <span> - الرقم الموحد:  </span><span data-bind="text: uniqenumber"></span>
+        </h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="span6 ">
+                <div class="control-group" data-bind="css: { 'error': selectedDepartment() == null }">
+                    <select class="span3" data-bind="options: departmentList, optionsText: 'Name', value: selectedDepartment, optionsCaption: locales.lstTransferDepartmentCaption, event: { change: getManagerSuer }">
+                    </select>
+                    <div class="control-group" data-bind="css: { 'error': selectedDepartmentUser() == null }">
+                        <select class="span3" data-bind="options: departmentUsersList, optionsText: 'Name', value: selectedDepartmentUser, optionsCaption: locales.lstDepartmentUsersCaption">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="span6 ">
+                <textarea data-bind="value: transferNotes, attr: { placeholder: locales.txtNotes }" style="width: 98%; height: 55px;"></textarea>
+            </div>
+        </div>
+
+        <div class="row-fluid" data-bind="style: { display: reasons().length > 0 ? 'block' : 'none' }">
+            <div class="span12 ">
+                <div class="control-group">
+                    <select class="span3" data-bind="options: reasons, optionsText: 'Reason', value: selectedReason, optionsCaption: locales.lstReasonsCaption">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-parent="#accordion2" data-bind="text: locales.lblRequiredProcedures">
+                </a>
+            </div>
+            <div id="div2" class="accordion-body expand">
+                <div class="accordion-inner">
+                    <div class="row-fluid">
+                        <div class="span12 ">
+                            <div>
+                                <select id="Select1" data-bind="options: internalProcedureList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: locales.lstProceduresCaption"></select>
+                                <button type="button" class="btn" style="margin-top: -10px;" data-bind="click: addProcedure"><i class="icon-plus"></i></button>
+                            </div>
+                            <div style="height: 180px; padding: 5px; overflow-y: auto; border: 1px solid #dddddd; background-color: #fff;" data-bind="foreach: documentProcedure">
+                                <div class="rounded" style="margin-bottom: 4px;">
+                                    <span data-bind="text: Procedure().Name"></span>
+                                    <span class="left-close" data-bind="click: $root.removeProcedure">
+                                        <i class="icon-remove"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: saveTransferDocument, text: locales.btnSaveTransfer"><i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>
+
+
+
+
+

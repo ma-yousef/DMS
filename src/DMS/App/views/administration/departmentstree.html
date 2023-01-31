@@ -1,0 +1,39 @@
+﻿<script type="text/html" id="department-template">
+    <li class="dd-item">
+        <div class="dd3-content">
+            <div style="float: right; margin-right: -10px; min-width: 30px; height: 20px;">
+                    <a href="#modalAddDepartment" class="btn green icn-only" style="padding: 5px; margin-top: -6px; width: 20px;" data-toggle="modal" data-bind="click: $root.createDepartment"><i class="icon-plus-sign icon-white"></i></a>
+            </div>
+            <div style="float: right; margin-right: 20px;">
+                <input type="checkbox" data-bind="checked: Active" />
+                <span>الفاعلية
+                </span>
+            </div>
+            
+            <div style="float: left;">
+                <span data-bind="text: Name"></span>
+            </div>
+            <div style="float: right; margin-right: 200px;" data-bind="style: { marginRight: Parent() ? '490px' : '200px' }">
+                [<span data-bind="text: Id"></span>]
+            </div>
+        </div>
+        <!-- ko if: acc_Account1().length > 0 -->
+        <ol class="dd-list" data-bind="template: { name: 'department-template', foreach: acc_Account1() }">
+        </ol>
+        <!-- /ko -->
+    </li>
+</script>
+<div class="row-fluid">
+    <div class="span6" style="width: 100%;">
+        <div class="portlet box blue">
+            <div class="portlet-title" style="padding: 2px;">
+            </div>
+            <div class="portlet-body ">
+                <div class="dd" id="accounts_nestable">
+                    <ol class="dd-list" data-bind="template: { name: 'accounts-template', foreach: chartOfAccounts }">
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

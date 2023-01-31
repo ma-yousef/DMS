@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E1637C4-5797-4FC9-B8B1-BBDE71902379}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMS.Services</RootNamespace>
+    <AssemblyName>DMS.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\lib\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.WebApi">
+      <HintPath>..\lib\Breeze.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.WebApi.EF">
+      <HintPath>..\lib\Breeze.WebApi.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\AdministrationUnitOfWork.cs" />
+    <Compile Include="Administration\IAdministrationUnitOfWork.cs" />
+    <Compile Include="Administration\IUserListRepository.cs" />
+    <Compile Include="Administration\UserListRepository.cs" />
+    <Compile Include="Attachment.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentType.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentType.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependencyRegistrar.cs" />
+    <Compile Include="DirectionType.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DMSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Document.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentHistory.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentProcedure.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentStatus.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentStatusReason.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentListRepository.cs" />
+    <Compile Include="Documents\DocumentListRepositoryReport.cs" />
+    <Compile Include="Documents\IDocumentListRepository.cs" />
+    <Compile Include="Documents\IDocumentUnitOfWork.cs" />
+    <Compile Include="Documents\DocumentUnitOfWork.cs" />
+    <Compile Include="DocumentType.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EfRepository.cs" />
+    <Compile Include="EfRepositoryReport.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="ImportanceLevel.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Issue.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Nationality.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationType.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Procedure.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureStatus.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyDepartment.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOnlyType.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOnlyUser.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Registry.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelatedPerson.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RequiredProcedure.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityLevel.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SentDocument.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Membership.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_OAuthMembership.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Roles.cs">
+      <DependentUpon>DMSModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DMSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DMSModel.edmx</DependentUpon>
+      <LastGenOutput>DMSModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DMSModel.edmx.diagram">
+      <DependentUpon>DMSModel.edmx</DependentUpon>
+    </None>
+    <None Include="DMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DMSModel.edmx</DependentUpon>
+      <LastGenOutput>DMSModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

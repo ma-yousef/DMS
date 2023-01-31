@@ -1,0 +1,169 @@
+E:\Private\DMS\DMS\bin\DMS.dll
+E:\Private\DMS\DMS\bin\DMS.pdb
+E:\Private\DMS\DMS\bin\Antlr3.Runtime.dll
+E:\Private\DMS\DMS\bin\Autofac.dll
+E:\Private\DMS\DMS\bin\Autofac.Integration.Mvc.dll
+E:\Private\DMS\DMS\bin\Autofac.Integration.WebApi.dll
+E:\Private\DMS\DMS\bin\Breeze.WebApi.dll
+E:\Private\DMS\DMS\bin\DMS.Services.dll
+E:\Private\DMS\DMS\bin\EntityFramework.dll
+E:\Private\DMS\DMS\bin\Irony.dll
+E:\Private\DMS\DMS\bin\Microsoft.Data.Edm.dll
+E:\Private\DMS\DMS\bin\Microsoft.Data.OData.dll
+E:\Private\DMS\DMS\bin\Microsoft.Web.Infrastructure.dll
+E:\Private\DMS\DMS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Private\DMS\DMS\bin\Newtonsoft.Json.dll
+E:\Private\DMS\DMS\bin\System.Spatial.dll
+E:\Private\DMS\DMS\bin\System.Web.Helpers.dll
+E:\Private\DMS\DMS\bin\System.Web.Http.OData.dll
+E:\Private\DMS\DMS\bin\System.Web.Mvc.dll
+E:\Private\DMS\DMS\bin\System.Web.Optimization.dll
+E:\Private\DMS\DMS\bin\System.Web.Razor.dll
+E:\Private\DMS\DMS\bin\System.Web.WebPages.Deployment.dll
+E:\Private\DMS\DMS\bin\System.Web.WebPages.dll
+E:\Private\DMS\DMS\bin\System.Web.WebPages.Razor.dll
+E:\Private\DMS\DMS\bin\WebActivator.dll
+E:\Private\DMS\DMS\bin\WebGrease.dll
+E:\Private\DMS\DMS\bin\WebMatrix.Data.dll
+E:\Private\DMS\DMS\bin\WebMatrix.WebData.dll
+E:\Private\DMS\DMS\bin\Breeze.WebApi.EF.dll
+E:\Private\DMS\DMS\bin\DMS.Services.pdb
+E:\Private\DMS\DMS\bin\Autofac.xml
+E:\Private\DMS\DMS\bin\Autofac.Integration.Mvc.xml
+E:\Private\DMS\DMS\bin\Autofac.Integration.WebApi.xml
+E:\Private\DMS\DMS\bin\Microsoft.Data.Edm.xml
+E:\Private\DMS\DMS\bin\Microsoft.Data.OData.xml
+E:\Private\DMS\DMS\bin\System.Spatial.xml
+E:\Private\DMS\DMS\bin\System.Web.Http.OData.xml
+E:\Private\DMS\DMS\bin\EntityFramework.xml
+E:\Private\DMS\DMS\bin\Newtonsoft.Json.xml
+E:\Private\DMS\DMS\bin\System.Web.Helpers.xml
+E:\Private\DMS\DMS\bin\System.Web.Mvc.xml
+E:\Private\DMS\DMS\bin\System.Web.Razor.xml
+E:\Private\DMS\DMS\bin\System.Web.WebPages.xml
+E:\Private\DMS\DMS\bin\System.Web.WebPages.Deployment.xml
+E:\Private\DMS\DMS\bin\System.Web.WebPages.Razor.xml
+E:\Private\DMS\DMS\bin\WebMatrix.Data.xml
+E:\Private\DMS\DMS\bin\WebMatrix.WebData.xml
+E:\Private\DMS\DMS\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS\bin\de\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\es\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\it\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS\bin\de\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\es\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\fr\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\it\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\ja\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\ko\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\ru\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\zh-Hans\System.Spatial.resources.dll
+E:\Private\DMS\DMS\bin\zh-Hant\System.Spatial.resources.dll
+E:\Private\DMS\DMS\obj\Debug\DMS.csprojResolveAssemblyReference.cache
+E:\Private\DMS\DMS\obj\Debug\DMS.dll
+E:\Private\DMS\DMS\obj\Debug\DMS.pdb
+E:\Private\DMS\DMS\obj\Debug\RdlCompile.cache
+E:\Private\DMS\DMS\obj\Debug\RdlCompile.compiled
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\DMS.dll.config
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\DMS.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\DMS.pdb
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Antlr3.Runtime.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Autofac.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Autofac.Integration.Mvc.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Autofac.Integration.WebApi.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Breeze.WebApi.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\DMS.Services.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\EntityFramework.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Irony.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.Data.Edm.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.Data.OData.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.ReportViewer.Common.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.Web.Infrastructure.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Newtonsoft.Json.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Net.Http.Formatting.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Spatial.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Helpers.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Http.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Http.OData.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Http.WebHost.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Mvc.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Optimization.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Razor.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.WebPages.Deployment.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.WebPages.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.WebPages.Razor.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\WebActivator.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\WebGrease.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\WebMatrix.Data.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\WebMatrix.WebData.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Breeze.WebApi.EF.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\DMS.Services.pdb
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\DMS.Services.dll.config
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Autofac.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Autofac.Integration.Mvc.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Autofac.Integration.WebApi.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.Data.Edm.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.Data.OData.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Microsoft.ReportViewer.WebForms.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Net.Http.Formatting.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Spatial.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Http.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Http.OData.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\EntityFramework.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\Newtonsoft.Json.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Helpers.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Http.WebHost.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Mvc.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.Razor.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.WebPages.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.WebPages.Deployment.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\System.Web.WebPages.Razor.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\WebMatrix.Data.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\WebMatrix.WebData.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\de\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\es\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\it\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\de\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\es\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\fr\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\it\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ja\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ko\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\ru\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\zh-Hans\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\bin\zh-Hant\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\obj\Debug\DMS.csprojAssemblyReference.cache
+D:\Personal\HDD Backup\Projects\DMS\DMS\obj\Debug\DMS.csproj.CoreCompileInputs.cache
+D:\Personal\HDD Backup\Projects\DMS\DMS\obj\Debug\DMS.csproj.CopyComplete
+D:\Personal\HDD Backup\Projects\DMS\DMS\obj\Debug\DMS.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS\obj\Debug\DMS.pdb

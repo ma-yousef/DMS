@@ -1,0 +1,129 @@
+﻿<div class="btn-toolbar">
+    <div class="well inline-form">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="control-group">
+                    <input type="text" class="input-small" placeholder="رقم القيد" data-bind="value: serial">
+                    <input type="text" class="input-small" placeholder="الرقم الموحد" data-bind="value: externalSerial">
+                    <select class="span3" data-bind="options: departmentList, optionsText: 'Name', value: selectedDepartment, optionsCaption: 'اختر جهة الوارد...'">
+                    </select>
+                    <select class="span3" data-bind="options: registryList, optionsText: 'Name', value: selectedregistry, optionsCaption: 'اختر سجل ...'">
+                    </select>
+                    <select class="span2" data-bind="options: documentStatusList, optionsText: 'Name', value: selectedStatus, optionsCaption: 'الكل'">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="control-group">
+                    <span class="control-label">من</span>
+                    <input type="text" class="input-meduim datepicker" placeholder="من تاريخ" data-bind="datepicker: fromDate">
+                    <span class="control-label">الى</span>
+                    <input type="text" class="input-meduimdatepicker" placeholder="الى تاريخ" data-bind="datepicker: toDate">
+                    <button type="button" class="btn" data-bind="click: searchSentDocuments" style="margin-top: -7px;">بحث<i class="icon-search" style="vertical-align: text-bottom;"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="well" id="documentList">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>رقم القيد</th>
+                <th>الرقم الموحد</th>
+                <th>التاريخ</th>
+                <th>سجل القيد</th>
+                <th>جهة الوارد</th>
+                <th>الموضوع</th>
+                <th>ملاحضات</th>
+                <th style="background-color:#e0eaf0;">موجهه الى</th>
+                <th style="background-color:#e0eaf0;">الحاله</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: sentDocumentList">
+            <tr>
+                <td data-bind="text: Document().Serial"></td>
+                <td data-bind="text: Document().ExternalId"></td>
+                <td data-bind="date: Date"></td>
+                <td data-bind="text: Document().Registry().Name"></td>
+                <td data-bind="text: Document().Department().Name"></td>
+                <td data-bind="text: Document().Issue().Name"></td>
+                <td data-bind="text: Notes"></td>
+                <td style="background-color:#e0eaf0;" data-bind="text: User1().Name"></td>
+                <td style="background-color:#ECF1F5;">
+                    <span class="label" data-bind="text: DocumentStatus().Name, css: { 'label-warning': DocumentStatusId() == 2, 'label-success': DocumentStatusId() == 3, 'label-important': DocumentStatusId() == 4 }">Warning</span>
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn" data-bind="click: $root.openDocumentView" title="عرض"><i class="icon-eye-open" style="margin-top: 2px;"></i></a>
+                        <a class="btn" data-toggle="modal" href="#modalHistoryDocument" data-bind="click: $root.openDocumentHistory" title="متابعة"><i class="icon-list" style="margin-top: 2px;"></i></a>
+                        <!-- ko if: DocumentStatusId() == 2 -->
+                        <a class="btn" data-toggle="modal" href="#modalCancelTransfeer" data-bind="click: $root.openCancelTransfeer" title="إلغاء الاحالة"><i class="icon-remove" style="margin-top: 2px;"></i></a>
+                        <!-- /ko -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="9">
+                    <div class="pagination">
+                        <ul data-bind="foreach: pagerList">
+                            <li><a href="#" data-bind="text: text, click: $root.pageIndexChanged"></a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="modal hide fade" id="modalHistoryDocument" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close modalEditDocumentClose" id="closeModal" data-dismiss="modal">x</button>
+        <h3><i class="icon-list" style="vertical-align: baseline; margin-left: 5px;"></i>تاريخ الإجراءات على الوثيقه رقم [<span style="margin: 5px;" data-bind="text: historyDocumentSerial"></span>]</h3>
+    </div>
+    <div class="modal-body" style="height: 400px; overflow-y: auto;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>حالة الوثيقة</th>
+                    <th>التاريخ</th>
+                    <th>اسم المستخدم</th>
+                    <th>ملاحظات</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: historyDocument">
+                <tr>
+                    <td data-bind="text: DocumentStatus().Name"></td>
+                    <td data-bind="date: Date()"></td>
+                    <td data-bind="text: User().Name"></td>
+                    <td data-bind="text: Notes()"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<div class="modal hide fade" id="modalCancelTransfeer">
+    <div class="modal-header">
+        <button type="button" class="close modalCancelDocumentClose" id="closeTransfeer" data-dismiss="modal">x</button>
+        <h3>الغاء إحالة الوثيقة</h3>
+    </div>
+    <div class="modal-body" id="transfeerForm" >
+        <br /><br /><br />
+        <div>
+        <button class="btn btn-success" data-bind="click: saveCancelTransfeer" style="float: left; margin-top: -25px;">الغاء إحالة القيد <i class="icon-ok icon-white"></i></button>
+        <button class="btn" data-bind="click: cancelTransfeer" style="float: left; margin-top: -25px;">إلغاء <i class="icon-cancel icon-white"></i></button>
+        </div>
+        
+    </div>
+</div>

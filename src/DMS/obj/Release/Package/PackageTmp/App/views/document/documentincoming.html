@@ -1,0 +1,465 @@
+﻿<div id="document">
+    <div class="well">
+        <div>
+            <h3>تسجيل قيد وارد</h3>
+            
+        </div>
+        <hr />
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divDocumentInfo">معلومات القيد
+                </a>
+            </div>
+            <div id="divDocumentInfo" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <div class="form-horizontal form-row-seperated ">
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    
+                                    <label class="control-label">رقم القيد: </label>
+                                    <div class="controls">
+                                        <input class="input-large" type="text" data-bind="value: id" disabled="disabled">
+                                    </div>
+                                    
+                                    <!-- ko if: !isEdit() -->
+                                    <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !selecteddocumenttype.isValid() }">
+                                        <label class="control-label">نوع القيد: </label>
+                                        <div class="controls">
+                                            <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: documenttype, optionsText: 'Name', value: selecteddocumenttype, optionsCaption: 'إختر...',event: { change: departmentTypeChanged}">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                    <!-- ko if: isEdit() -->
+                                    <div class="control-group" style="margin-bottom: 0px;"  >
+                                        <label class="control-label">نوع القيد: </label>
+                                        <div class="controls">
+                                            <label style="text-align:right; margin-right:10px; margin-top:2px;" class="span3"  tabindex="1" data-bind="text: documentTypeNonEdit">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !externalid.isValid() }">
+                                        <label class="control-label">الرقم الموحد: </label>
+                                        <div class="controls">
+                                            <input class="input-large" type="text" data-bind="value: externalid">
+                                        </div>
+                                    </div>
+                                    <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !documentdate.isValid() }">
+                                        <label class="control-label">تاريخ الوارد: </label>
+                                        <div class="controls">
+                                            <input type="text" data-bind="datepicker: documentdate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !selectedRegistry.isValid() }">
+                                    <label class="control-label">نوع الوارد: </label>
+                                    <div class="controls">
+                                        <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: registry, optionsText: 'Name', value: selectedRegistry, optionsCaption: 'إختر...'">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !selectedSecurityLevel.isValid() }">
+                                    <label class="control-label">درجة السرية: </label>
+                                    <div class="controls">
+                                        <div>
+                                            <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: securityLevels, optionsText: 'Name', value: selectedSecurityLevel, optionsCaption: 'إختر...'">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span6" >
+                                <div class="control-group" style="margin-bottom: 0px;" id ="departmentDirection">
+                                    <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !selectedDepartmentIn.isValid() }">
+                                        <label class="control-label">جهة الوارد: </label>
+                                        <div class="controls">
+                                            <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: departmentsIn, optionsText: 'Name', value: selectedDepartmentIn, optionsCaption: 'إختر...'">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !selectedDepartmentOut.isValid() }">
+                                        <label class="control-label">الادارة المحال: </label>
+                                        <div class="controls">
+                                            <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: departmentsOut, optionsText: 'Name', value: selectedDepartmentOut, optionsCaption: 'إختر...' ,event: { change: loadTransfeeredUser}">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;" data-bind="css: { 'error': !selectedImportanceLevels.isValid() }">
+                                    <label class="control-label">مستوى الاهمية: </label>
+                                    <div class="controls">
+                                        <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: importanceLevels, optionsText: 'Name', value: selectedImportanceLevels, optionsCaption: 'إختر...', event: { change: importnaceLevelChanged }">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span6">
+                                <label class="control-label">اقصى موعد لإنجاز الوثيقه: </label>
+                                <div class="controls" >
+                                    <input id="expiryDate" type="text" data-bind="datepicker: expiryDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid" style="display:none;">
+                            <div class="span6 ">
+                                <div class="control-group" style="margin-bottom: 0px;">
+                                    <label class="control-label">تحتاج الى رد: </label>
+                                    <div class="controls">
+                                        <input type="checkbox" data-bind="checked: needResponse">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divIssue">الموضوع
+                </a>
+            </div>
+            <div id="divIssue" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="form-horizontal form-row-seperated ">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group" data-bind="css: { error: !subject.isValid() }" style="padding-right: 0px; margin-right: 0px; margin-left: 5px;">
+                                    <label class="control-label">الموضوع: </label>
+                                    <div class="controls">
+                                        <input type="text" class="span6" data-bind="value: subject" id="subject">
+                                        <span class="add-on">
+                                            <a href="#modalRelationDocument" class="btn" data-toggle="modal" title="ربط">
+                                                <i class="icon-resize-small" style="margin-top: 2px;"></i>
+                                            </a>
+                                        </span>
+                                        <span class="add-on">
+                                            <button class="btn" data-bind="click: removeIssue" title="إزالة الربط">
+                                                <i class="icon-remove" style="margin-top: 2px;"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">الايضاحات : </label>
+                                    <div class="controls">
+                                        <textarea style="height: 50px;" class="span6" data-bind="value: note"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divRelatedPersons">الأسماء</a>
+            </div>
+            <div id="divRelatedPersons" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <table class="table" style="margin-bottom: 0px;">
+                        <thead>
+                            <tr>
+                                <th>الاسم</th>
+                                <th>رقم الهوية</th>
+                                <th>الجنسية</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: personLines">
+                            <tr>
+                                <td style="">
+                                    <div class="control-group" data-bind="css: { error: !Name.isValid() }"
+                                        style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+                                        <input type="text" data-bind="value: Name">
+                                    </div>
+                                </td>
+                                <td style="">
+                                    <div class="control-group" data-bind="css: { error: !NationalId.isValid() }"
+                                        style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+                                        <input type="text" data-bind="value: NationalId">
+                                    </div>
+                                </td>
+                                <td style="">
+                                    <div class="control-group" data-bind="css: { error: !NationalityId.isValid() }" style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+                                        <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: $parent.nationality, optionsText: 'Name', optionsValue: 'Id', value: NationalityId, optionsCaption: 'إختر...'">
+                                        </select>
+                                    </div>
+                                </td>
+                                <td style="">
+                                    <a class="btn btn-danger icn-only" data-bind="click: $parent.removePersonLine">
+                                        <i class="icon-remove icon-white" style="margin-top: 2px;"></i></a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td style=""><a data-bind="click: createPersonLine" class="btn green"><i class="icon-plus"></i>إضافة </a></td>
+                                <td style="margin-bottom: 0px;"></td>
+                                <td style="margin-bottom: 0px;"></td>
+                                <td style="margin-bottom: 0px;"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divAttachments">عرض الخطاب
+                </a>
+            </div>
+            <div id="divAttachments" class="accordion-body collapse">
+                <div class="accordion-inner" style="overflow:auto;">
+                    <table class="table" style="margin-bottom: 0px;">
+                        <thead>
+                            <tr>
+                                <th>أنواع الارشفة</th>
+                                <th>عدد الورقات</th>
+                                <th>ملاحظات</th>
+                                <th>المرفقات</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: attachmentLine">
+                            <tr>
+                                <td style="">
+                                    <div class="control-group" data-bind="css: { error: !AttachmentTypeId.isValid() }"
+                                        style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+                                        <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: $parent.attchmentType, optionsText: 'Name', optionsValue: 'Id', value: AttachmentTypeId, optionsCaption: 'إختر...'">
+                                        </select>
+                                    </div>
+                                </td>
+                                <td style="">
+                                    <div class="control-group" data-bind="css: { error: !Count.isValid() }"
+                                        style="padding-right: 0px; margin-right: 0px; margin-left: 5px;">
+                                        <input type="text" data-bind="value: Count">
+                                    </div>
+                                </td>
+                                <td style="">
+                                    <input type="text" data-bind="value: Notes"></td>
+                                <td style="">
+                                    <!-- ko if: !FileName.isValid() -->
+                                    <div class="control-group" data-bind="css: { error: !FileName.isValid() }" style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+                                        <form data-bind="attr: { name: 'uploadForm' + $index }">
+                                            <input type="file" data-bind="attr: { name: 'uploadFile' + $index }, fileUpload: { property: 'FileName', url: '/api/Document/UploadFiles' }">
+                                        </form>
+                                    </div>
+                                    <!-- /ko -->
+                                    <!-- ko if: FileName.isValid() -->
+                                    <a class="btn" href="#modalViewAttachment" data-toggle="modal" data-bind="click: $root.showAttachment" title="عرض"><i class="icon-eye-open" style="margin-top: 2px;"></i>
+                                    </a>
+                                    <!-- /ko -->
+                                </td>
+                                <td style=""><a data-bind="click: $parent.removeAttachmentLine" class="btn btn-danger"><i class="icon-remove icon-white" style="margin-top: 2px;"></i></a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td style=""><a class="btn green" data-bind="click: createAttachmentLine"><i class="icon-plus"></i>إضافة</a></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                                <td style=""></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divReadOnly">صلاحيات الإطلاع
+                </a>
+            </div>
+            <div id="divReadOnly" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="row-fluid">
+                        <div class="span6 ">
+                            <div>
+                                <select id="readonlyDepartmentList" data-bind="options: internalDepartmentList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: 'اختر جهه...'"></select>
+                                <button type="button" class="btn" style="margin-top: -10px;" data-bind="click: addReadOnlyDepartment"><i class="icon-plus"></i></button>
+                            </div>
+                            <div style="height: 200px; padding: 5px; overflow-y: auto; border: 1px solid #dddddd; background-color: #fff;" data-bind="foreach: documentReadOnlyDepartments">
+                                <div class="rounded" style="margin-bottom: 4px;">
+                                    <span data-bind="text: Department().Name"></span>
+                                    <span class="left-close" data-bind="click: $root.removeReadOnlyDepartment">
+                                        <i class="icon-remove"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6 ">
+                            <div id="divReadonlyUser">
+                                <select data-bind="options: internalDepartmentList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: 'اختر جهه...', event: { change: readOnlyDepartmentChanged }"></select>
+                                <select id="readonlyUserList" data-bind="options: readonlyUserList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: 'اختر موظف...'"></select>
+                                <button type="button" class="btn" style="margin-top: -10px;" data-bind="click: addReadOnlyUser"><i class="icon-plus"></i></button>
+                            </div>
+                            <div style="height: 200px; padding: 5px; overflow-y: auto; border: 1px solid #dddddd; background-color: #fff;" data-bind="foreach: documentReadOnlyUsers">
+                                <div class="rounded" style="margin-bottom: 4px;">
+                                    <span data-bind="text: User().Name"></span>
+                                    <span class="left-close" data-bind="click: $root.removeReadOnlyUser">
+                                        <i class="icon-remove"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#divPopularization">تعاميم
+                </a>
+            </div>
+            <div id="divPopularization" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="row-fluid">
+                        <div class="span6 ">
+                            <div>
+                                <select id="popularizationDepartmentList" data-bind="options: internalDepartmentList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: 'اختر جهه...'"></select>
+                                <button type="button" class="btn" style="margin-top: -10px;" data-bind="click: addPopularizationDepartment"><i class="icon-plus"></i></button>
+                            </div>
+                            <div style="height: 200px; padding: 5px; overflow-y: auto; border: 1px solid #dddddd; background-color: #fff;" data-bind="foreach: documentPopularizationDepartments">
+                                <div class="rounded" style="margin-bottom: 4px;">
+                                    <span data-bind="text: Department().Name"></span>
+                                    <span class="left-close" data-bind="click: $root.removePopularizationDepartment">
+                                        <i class="icon-remove"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6 ">
+                            <div id="divPopularizationUser">
+                                <select data-bind="options: internalDepartmentList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: 'اختر جهه...', event: { change: popularizationDepartmentChanged }"></select>
+                                <select id="popularizationUserList" data-bind="options: popularizationUserList, optionsText: 'Name', optionsValue: 'Id', optionsCaption: 'اختر موظف...'"></select>
+                                <button type="button" class="btn" style="margin-top: -10px;" data-bind="click: addPopularizationUser"><i class="icon-plus"></i></button>
+                            </div>
+                            <div style="height: 200px; padding: 5px; overflow-y: auto; border: 1px solid #dddddd; background-color: #fff;" data-bind="foreach: documentPopularizationUsers">
+                                <div class="rounded" style="margin-bottom: 4px;">
+                                    <span data-bind="text: User().Name"></span>
+                                    <span class="left-close" data-bind="click: $root.removePopularizationUser">
+                                        <i class="icon-remove"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div>
+            
+            <button class="btn btn-success" data-bind="click: saveDocument" style="float: left; margin-top: -25px;">حفظ قيد الوارد <i class="icon-ok icon-white"></i></button>
+        </div>
+    </div>
+</div>
+<a id="openModelTransfeered" href="#modalTransfeerAuto" class="btn" data-toggle="modal" title="" style="visibility:hidden;"></a>
+<div class="modal hide fade" id="modalRelationDocument" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close modalEditDocumentClose" id="closeModal" data-dismiss="modal">x</button>
+        <h3><i class="icon-resize-small" style="vertical-align: baseline; margin-left: 5px;"></i>الربط بموضوع</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-inline">
+            <input type="text" class="input-medium" placeholder="رقم المسلسل" data-bind="value: SerialSearch">
+            <input type="text" class="input-medium" placeholder="عنوان الموضوع" data-bind="value: SubjectSearch">
+            <input type="text" class="input-medium" placeholder="الرقم الموحد" data-bind="value: ExternalSearch">
+            <button type="button" class="btn" data-bind="click: SubjectSearchClick">بحث<i class="icon-search" style="vertical-align: text-bottom;"></i></button>
+        </div>
+        <hr />
+        <div style="height:300px; overflow-y:auto;" id="relation">
+            <table class="table" style="width:100%;" data-bind="style: { display: DocumentsSearch().length == 0 ? 'none' : 'block' }">
+                <thead>
+                    <tr>
+                        <th>المسلسل</th>
+                        <th>الموضوغ</th>
+                        <th>موضوع الربط</th>
+                        <th>رقم الربط</th>
+                        <th>الرقم الموحد</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: DocumentsSearch">
+                    <tr>
+                        <td data-bind="text: Serial()"></td>
+                        <td data-bind="text: Subject()"></td>
+                        <td data-bind="text: Issue().Name()"></td>
+                        <td data-bind="text: Issue().Id()"></td>
+                        <td data-bind="text: ExternalId"></td>
+                        <td>
+                            <a class="btn" data-bind="click: $root.selectSubject">ربط</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+    </div>
+
+</div>
+<div class="modal hide fade" id="modalViewAttachment" style="width: 1000px; right: 35%; top: 40%; height: 630px;">
+    <div class="modal-header">
+        <button type="button" class="close modalEditDocumentClose" id="Button1" data-dismiss="modal">x</button>
+        <h3><i class="icon-eye-open" style="vertical-align: baseline; margin-left: 5px;"></i>عرض الوثيقة</h3>
+    </div>
+    <div class="modal-body" style="height: 520px; max-height: none; overflow: hidden;">
+        
+        <iframe id="attach" style="height: 99%; width: 100%;"></iframe>
+        
+        
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>
+<div class="modal hide fade" id="modalTransfeerAuto">
+    <div class="modal-header">
+        <button type="button" class="close modalEditDocumentClose" id="closeTransfeer" data-dismiss="modal">x</button>
+        <h3>إحالة الوثيقة</h3>
+    </div><br />
+    <div class="modal-body" id="transfeerForm" >
+        <div class="control-group"  style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+              <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: userTransfeeres, optionsText: 'Name', value: selectedUserTransfeered, optionsCaption: 'إختر...'">
+              </select>
+        </div>
+        <div>
+        <button class="btn btn-success" data-bind="click: saveTransfeer" style="float: left; margin-top: -25px;">إحالة القيد <i class="icon-ok icon-white"></i></button>
+        <button class="btn" data-bind="click: cancelTransfeer" style="float: left; margin-top: -25px;">إلغاء <i class="icon-cancel icon-white"></i></button>
+        </div>
+        
+    </div>
+</div>
+
+
+                                            
+
+
+

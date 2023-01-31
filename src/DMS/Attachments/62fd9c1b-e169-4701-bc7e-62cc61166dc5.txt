@@ -1,0 +1,5 @@
+pie chart number of documents (options: new, transfered, open, pending ,closed) 
+bar chart number of documents per department(options: new, transfered, open, pending ,closed) and choose what departments to show
+----------------------------
+daily statistics for documents (options: new, transfered, open, pending, closed) can be filtered by date(from,to) or department default this month
+

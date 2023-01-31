@@ -1,0 +1,615 @@
+
+Welcome to module 2 of Digital Signal
+Processing.
+In this module, we are going to see the
+basics of Digital Signal Processing and
+we'll start by considering discrete time
+signals and
+operators of discrete time signals in
+module 2.1.
+In module 2.2, we are going to consider
+complex exponentials.
+These are the most elementary and
+fundamental discrete time signals.
+Finally,
+in module 2.3, we are going to take
+building blocks, elementary ones from
+signal processing to see
+some elementary operations on signals,
+like moving averages
+and recursive filters, and finally build a
+simple synthesizer.
+Let's now get started and see what
+discrete time signals really are.
+[BLANK_AUDIO]
+Module 2.1, Discrete-time signals.
+The Overview is the following.
+We will definie discrete-time signals to
+know what we are
+talking about here as a main component in
+the class.
+We are going to look at different types of
+signals, give examples.
+And then go onto operators, which are
+elementary blocks,
+building blocks for more complex systems
+that will be
+used in the discrete-time signal
+processing.
+And finally finish with two concepts which
+will come also over and over in
+the class which is the energy of a signal
+and the power of a signal.
+What is the earliest discreet time signals
+we can think of?
+Well, probably the earliest one that has
+been recorded are the floods of the Nile.
+So the Nile of course is extremely
+important in the agriculture of Egypt and
+so from very early on, people recorded how
+high the Nile would come in
+any given year, and this representation
+has been caught here on this beautiful
+historical record that is about 4 and a
+half thousand
+years old, and these are representation of
+the flood data.
+Unfortunately, we don't have digital
+version of this data,
+so we can really do signal processing on
+this.
+Maybe somebody wants to pick up a
+research project and actually, do this
+transformation.
+In the meantime, we have access to more
+recent data.
+So this is an example of the, flood in the
+Nile in cubic meters per second.
+Yearly measurements over the last 100
+years or so.
+you can see the representation is these
+lollipop diagrams.
+So as a lollipop is, at any given year, we
+represent one data point.
+So we have here,
+almost a bit more than 100.
+It's a very busy signal, but overall, even
+if you just look at it approximately, you
+can sort of see there is a trend, okay?
+And the trend is not a good one, means
+there is less and less water in the Nile.
+The second example of, signal is daily
+temperature.
+It's probably your first scientific
+experiment.
+Every day, at 8 am, you look at the
+temperature outside.
+You do this every day for a year, for a
+couple of years and so on.
+And you record something that could also
+be
+a lollipop diagram, like in the previous
+slide.
+Except there are so many points here, that
+we decided to actually join them.
+So it
+looks almost as a continuous time function
+even though
+it's one measurement every day, or a few
+thousand days.
+Now, when you look at this, you, of
+course, immediately see that there are
+seasons happening.
+So the temperature here in Centigrades,
+you know, goes up and down
+on a, with a yearly variation, and this we
+can actually show.
+We can fit the sinusoid, here.
+It's a blue curve
+that has been added.
+And this is simply the trends that these
+[INAUDIBLE]
+seasonal changing, daily temperature.
+Now, this blue sinusoid is actually one of
+the
+things we're going to do here in the
+class.
+We're going to take a data set like the
+original data set and
+going to fit a sinusoid instead of our
+algorithmic methods to actually do this.
+The next signal is, so called solar
+activity.
+So as you probably know, the sun has
+different intensity due to
+solar spots, and this has been measured
+over several hundred years now, and
+we again see this this curve here, which
+has a lot of variation.
+It's not seasonal variation.
+It's a different variation and
+we shall also analyze this variation later
+on in the class.
+Now all the signals so far had to do with
+physics.
+Now we can see a man made signal
+that's a world population, from the
+beginning of current
+times until now, and you see that it's a
+slowly evolving curve up to the industrial
+revolution here.
+This is the industrial revolution, and
+then for various reasons which
+are not the topics of this class, there
+was a population explosion.
+By now we are close to 8 billion, and
+it's not completely clear what's going to
+happen next.
+Another man-made signal is, the value of
+the stock market.
+Here, it's the Dow Jones and again it's
+something that looks a
+little bit like the world population in
+the beginning, so very small.
+Then there is an exponential increase,
+then there is the internet bubble,
+and the financial crisis, etc.
+Okay, so it's a good question mark.
+What is going to happen next?
+We could claim that thanks to signal
+processing,
+we can predict the future of the stock
+market.
+But I will be honest, this is a very hard
+problem.
+If we knew how to do this, we probably
+wouldn't be, teaching free online course.
+We would be do, doing something else for a
+living.
+But anyway, it's a typical discrete time
+signal.
+You can measure the Dow Jones every day
+and record this as we did here.
+Again, it would be a lollipop a stick
+diagram.
+But here, we have joined the points
+because there
+are so many points over this period of
+time.
+So let's be a little bit more formal.
+We saw several examples.
+All of these examples where a number per
+day, a number per second, a number per
+year.
+in the channel case this number can be a
+complex number, so
+for us a digi, discrete-time signal is a
+sequence of complex numbers.
+We will look at mostly one dimensional
+signals and the dimension typically is
+time.
+The notation, that's very important to
+note is that x is the name of the signal,
+then we have a square bracket and finally
+we have the index m which is an
+integer.
+We typically have two sided
+sequences, so they start from minus
+infinity, to,
+let's say x minus 1, x at 0, x at 1, etc
+and goes of to
+plus infinity.
+And the index is dimension-less.
+So it could be seconds, years, micro
+seconds or whatever,
+but we just index it as a dimensionless
+integer index.
+The analysis of a signal means we take
+periodic measurements.
+This is a topic that we'll study in detail
+under the name of sampling.
+So for example, in the case of the Nile,
+we took a sample every year.
+In the case of the stock market, every
+day.
+And synthesis is when we generate a
+sequence of samples.
+We will see this when we talk about the
+Karplus-Strong Algorithm later in
+this module, where we indeed generate a
+musical signal by generating discrete time
+samples.
+So among the formal signals, or elementary
+signals, we will be use in this class.
+We have for example the delta signal.
+So delta signal denoted by delta of n
+here, is very simple.
+It's the simplest possible signal.
+It's 0 everywhere except at the origin,
+where it's equal to 1.
+Okay.
+Now do such signals exist in reality or is
+it a pure mathematical abstraction?
+It is an abstraction.
+Most signals will not be that simple, but
+let
+me show you one signal which comes close
+to that.
+Let us look at natural device called the
+clappers that
+is used in Hollywood studios to
+synchronize audio and video.
+Why do they need this?
+Well, sometimes the audio is recorded on
+one machine, the video,
+on another machine, and later, you have to
+splice them together.
+And so the way it is done is that you use
+this clapper.
+You write down what scene is shot by what
+director in what movie.
+And what you do is that you have the
+clapper that is open.
+You put it in front of the camera then you
+close it and that gives a click sound.
+And we see the click sound here at the
+bottom.
+And it''s not exactly a d rack.
+It's more complicated.
+But it is really an impulse.
+An impulse of sound when you listen to it
+it sounds like a d rack.
+When you look at it in detail it has
+oscillations
+because it's a piece of wood that is going
+to vibrate.
+But to a first approximation, this is as
+close as it gets to a d rack.
+The next simple signal is a so called unit
+step.
+It is sequence that is 0 from minus
+infinity till the origin.
+At the origin it flips to 1 and is 1
+everywhere after that.
+Okay.
+Does such a signal exist in reality?
+A physical implementation would be a
+switch
+like this blade switch that we see here.
+We call this the Frankenstein switch, if
+you have seen the movie.
+Dr. Frankenstein, at some point, gives
+life to the monster.
+So, he flips a switch, a blade switch and
+then some current flows into the monster
+that comes alive.
+So, that's a beautiful picture of one of
+these blade switches.
+The third, signal that is very typical is
+a so called exponential decay sequence.
+So it's a combination of two things.
+Okay, it has, a unit step,
+so the signal is 0 before the origin and
+then it is positive.
+And that's at point we apply an
+exponential here
+with a root a that is smaller than 1.
+Taken to the nth power.
+And so it nicely comes down as an
+exponential.
+Okay, if we did not apply the unit step,
+then of course the exponential would grow
+up here exponentially,
+and it would be unbounded.
+So that would be, not signal you would
+encounter in practice.
+So we see here a signal that has been
+specifically engineered that
+it looks actually like a signal that you
+would encounter in real life.
+And real life is coffee.
+So the way coffee will lose its
+temperature is governed by partial
+differential equation, that we see here
+goes actually back to Newton, one of the
+greatest scientist of all time.
+So, the law of cooling says that the rate
+of cooling is proportional to
+the difference of temperature between the
+cup of coffee and the environment, okay.
+And there is a constant c here that
+says how fast actually the temperature
+will decay.
+So negative sign means the temperature
+will go down when the coffee is warm and
+the environment is cold.
+And the solutions of the differential
+equation is
+given here and it has, indeed, an
+exponential term.
+There are some practical issues.
+you have only convection at work and there
+has to be sufficient conductivity,
+and then you will see a decay, that looks
+a little bit like this.
+Okay?
+And here, let's say the ambient
+temperature is 0.
+We start with
+the coffee at 100 degrees, boiling water.
+And it will start to decay like this.
+And the speed of decay will depend
+how much convection there is, how much
+conductivity.
+Okay.
+So this was all to show you a little bit a
+sense
+of you have physics at work and you see
+signals in real life.
+A discreet time version of these signals
+will be typically sequences we'll be
+interested
+in in this class.
+The next character in the play is a
+sinusoid.
+So here is the sinusoid indicated as sine
+of frequency omega naught
+times n, the index, plus a phase, theta.
+Okay.
+In the drawing, we see theta is equal to
+0.
+actually, it's not equal to zero.
+I'm sorry.
+theta is equal to pi over 2.
+So, at the origin it's maximum and then we
+have the sinusoidal variation.
+Now sinusoidal signals are everywhere.
+The heartbeat is an example.
+The whistle on
+the whistle used on a train that we
+will also analyze later is, has sinusoidal
+components.
+Waves that are showing up on the shore are
+another example of sinusoidal components.
+And, of course, musical instruments,
+really leave off, strings
+that have sinusoidal models, something
+we'll also study in detail.
+There are really four classes of signals.
+And, each one of them is a natural example
+of a signal and is used in different
+cases.
+The first one, the simplest one is, the
+finite length signal, then the infinite
+length sequence, periodic signals, and
+finite support sequences.
+Let's look at each of them in a little bit
+more detail.
+So finite length signal can be either
+written in the sequence notations.
+So the sequence notation we have seen
+before x of square bracket n.
+But n is only going from 0 to n minus 1.
+So it's a length's capital n signal.
+The vector notation puts this into a
+vector, and in this class vectors are
+column vectors, so we have the entry of
+the vectors at x0, x1 up
+to xn minus 1, a transpose to get a column
+vector.
+Finite length signals or vectors are very
+useful, for
+example, in numerical packages like Matlab
+and so on.
+Infinite length signals.
+We again have the sequence notations that
+we had seen before.
+And the index and n now is from the
+integer
+set, meaning from minus infinity to plus
+infinity.
+This is very good for abstraction, for
+theorems, for analysis, using
+Furey analysis, for example, z transforms,
+that we will see later.
+But, of course, in real life, and
+fortunately,
+nothing lives from minus infinity to plus
+infinity.
+That depends a little bit on your beliefs,
+but
+if you believe in big bang, then it
+started at
+some point.
+And if you are not certain about
+reincarnation, it will stop at some point.
+So the sequence notation is really a
+mathematical abstraction.
+Periodic signals we told earlier about
+sinusoids.
+So periodic sequences do exist also in
+real life.
+They are denoted by x tilde, okay.
+So the notation here tilde means there is
+a periodicity and it means that x
+n is equal to x n plus k times the period.
+So, capital N, is the period,
+k is an integer, it means how many periods
+we shift and n is the usual index for
+time.
+So, one of these periods of lengths n has
+all the information needed.
+The rest is just a repetition.
+Okay.
+And very often, periodic signals are a
+bridge between finite and infinite length
+signals because
+you start with a, with a finite-length
+signal and maybe you let the period go
+to infinity, or you take a periodic signal
+and you
+let the N, the length of the period, go to
+infinity.
+A finite-support sequence is defined by x
+over bar, given here and
+it's a sequence x n that is only different
+from 0 for n between 0 and N minus 1.
+It is 0 otherwise, and it has the same
+information as a finite-lengths signal of
+lengths N, and it
+is another possible bridge between finite
+and infinite length signals.
+Now that we have seen elementary signals,
+let's talk a little bit about operators.
+So if we have a sequence, we can
+scale the sequence by multiplying it with
+scalar alpha.
+Okay.
+So the natural thing is you have a
+sequence like this.
+You multiply it by 2.
+It's going to look the same.
+It's simply going to have amplitudes twice
+as large.
+The sum of two signals is obvious.
+Take two sequences and the result will be
+the sum of the two.
+The product of two sequences, same story,
+you take two elementary sequences x n and
+z n, you multiply them term by term.
+And last but not least, very important,
+the shift by k.
+Or the delay by k.
+So k is a positive integer.
+So when we write y n is equal to y n minus
+k.
+Then y n is a delayed version here of the
+sequence x mainly by k terms.
+Right, and to look at this in detail, it's
+sometimes a little bit confusing,
+but if you want to think about it very
+quickly, is that y of 0.
+So the output sequence at 0 is equal to x
+of
+0 minus k, so x of minus k.
+This is in the past so it
+is a single x from index minus k.
+Let's look specifically at these shifts on
+the various types of sequences we have
+seen.
+So the shift of finite-lengths sequence.
+Well, we have on the left side the
+original sequence which is the
+decaying set here, of samples, and we are
+going to
+shift it by extending this sequence with
+0's left and right.
+Okay.
+So this, the only thing we did is that we
+added 0's
+before the 7 as the eight samples and
+after the eight samples.
+And if we shift it.
+Well, we delayed by 1, so it has shifted
+right.
+And what has happened is that 0 showed up
+here and the x7 fell off on the right
+side.
+We see this here
+at the bottom, that we can follow what
+happens as we shift further and further.
+Okay, shift by 2.
+Again it is delayed by 2.
+So we have two 0's at the beginning and
+two samples that fall off.
+And we see the result at the bottom right
+side.
+And shift by 3, shift by 4 and you see the
+idea.
+We can also have a model of the world
+where the signal
+is periodically extended and then the
+shift operator will have another effect.
+Let's look at this.
+So we start with the sequence eight
+samples from x0 to x7.
+We extend it periodically.
+Okay, so here we have a second
+period, here we have the previous period.
+And now when we shift,
+what will happen is that, we have a shift
+pile to the right okay?
+x tilde n minus one.
+So, x7 enters on the left side, and x7
+leaves at the right side, okay.
+So, the new signal, given here at the
+bottom right, has x7 entering
+here, and having left on the other side.
+Now this of course
+is the same as doing a circular shift,
+okay.
+Let's do a few more.
+So x tilde n minus 2, we have now
+two new samples entering and two that fell
+off there.
+And at the bottom right, we see the
+picture again.
+X tilde n minus 3, same story.
+X tilde n minus 4, one more step and you
+start to see what is happening here.
+We have now seen the shift operator, which
+is one of the most fundamental
+ones we are going to use over and over
+again, and study in great detail.
+Let's talk about two conceptual
+characteristics of signals.
+The first one is something we call the
+energy.
+The energy is a sum of squares, of the
+samples.
+Okay.
+It is given in the formula here.
+So you take a sequence.
+You take the absolute
+value of the samples.
+You square it.
+And you sum from minus infinity to plus
+infinity.
+This may or may not be finite.
+If you take a sinsusoid it's, signals that
+starts at minus infinity, goes to plus
+infinity, has amplitudes that vary, let's
+say between minus 1 and 1.
+And of course if you square it and you sum
+from minus infinity to plus infinity, It
+will blow up, okay.
+So, a notion that can still be defined
+even for such
+signals that might have infinite, energy
+is a notion of power.
+The notion of power is that, you look at
+the energy over
+a window, the window is of size, 2 n plus
+1, right?
+Because we sum from minus n here to plus
+n, the sum of squares.
+But we normalize this by
+the length of the window.
+So we put the 1 over 2 n plus 1, and
+this is the power, because it's like the
+instantaneous energy for the sequence.
+So for periodic signals as I have all
+ready alluded to, the energy will be
+infinite.
+And the power is simply the energy of
+one period divided by the length of the
+period.
+So this is given down here.
+So, this part is the energy.
+1 over gives the power, and this typically
+will
+be actually finite, even when this guy is
+infinite.
+End of module 2.1
+[SOUND].
+

@@ -1,0 +1,35 @@
+﻿<div id="addImportanceLevel" class="well form-inline">
+    <input type="text" class="input-large" placeholder="المستوى" data-bind="value: Name">
+    <input type="text" class="input-large" placeholder="اقصى فترة للانجاز" data-bind="value: ExpiryPeriod">
+    <button type="button" class="btn btn-success" data-bind="click: addImportanceLevel">إضافه<i class="icon-plus icon-white" style="vertical-align: text-bottom;"></i></button>
+</div>
+<div id="importancelevellist" class="well">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 30%">المستوى</th>
+                <th>اقصى فتره لإنجاز الوثيقه ( يوم )</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: importanceLevelList">
+            <tr>
+                <td>
+                    <span data-bind="text: Name, style: { display: ($root.editImportanceLevelId() != Id()) ? 'block' : 'none' }"></span>
+                    <input type="text" data-bind="value: Name, style: { display: ($root.editImportanceLevelId() == Id()) ? 'block' : 'none' }" />
+                </td>
+                <td>
+                    <div data-bind="style: { display: ($root.editImportanceLevelId() != Id()) ? 'block' : 'none' }">
+                        <div class="rounded" style="width: 220px; height: 20px; float: right; margin-left: 5px;" data-bind="text: DefaultExpiry">
+                        </div>
+                        <button class="btn" style="float: right;" data-bind="click: $root.edit"><i class="icon-edit" style="margin-top: 2px;"></i></button>
+                    </div>
+                    <div data-bind="style: { display: ($root.editImportanceLevelId() == Id()) ? 'block' : 'none' }">
+                        <input type="text" data-bind="value: DefaultExpiry" />
+                        <button class="btn" style="margin-top: -9px;" data-bind="click: $root.save"><i class="icon-ok" style="margin-top: 2px;"></i></button>
+                        <button class="btn" style="margin-top: -9px;" data-bind="click: $root.cancel"><i class="icon-remove" style="margin-top: 2px;"></i></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

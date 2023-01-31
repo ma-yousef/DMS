@@ -1,0 +1,38 @@
+﻿<div id ="login-form" class="container">
+    <div class="row" style="padding-right:150px;">
+        <img src="~/Content/images/banner_ryd.JPG" />
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="page-splash-message" style="font-family:Arial;">
+            نظام إدارة الوثائق
+        </div>
+    </div>
+    <br />
+    <br />
+    <div id="loginForm" class="row">
+        <div class="span4 offset4 well" style="margin-right: 410px;">
+            <div id="errors" class="alert alert-error" style="display: none;" data-bind="style: { display: errors().length > 0 ? 'block' : 'none' }">
+                <a class="close" data-dismiss="alert" href="#" data-bind="click: hideErrors">×</a>
+                <div data-bind="foreach: errors">
+                    <span data-bind="text: $data"></span>
+                </div>
+            </div>
+            <form method="POST" action="" accept-charset="UTF-8">
+                <div data-bind="css: { 'control-group error': !loginModel.userName.isValid() && !firstTime() }">
+                    <input type="text" id="username" class="span4" name="username" placeholder="إسم المستخدم" data-bind="value: loginModel.userName">
+                </div>
+                <div data-bind="css: { 'control-group error': !loginModel.password.isValid() && !firstTime() }">
+                    <input type="password" id="password" class="span4" name="password" placeholder="كلمة السر" data-bind="value: loginModel.password">
+                </div>
+                <label class="checkbox">
+                    <input type="checkbox" name="remember" value="1" data-bind="value: loginModel.rememberMe">
+                    تذكرنى
+                </label>
+                <br />
+                <button type="submit" id="login-button" name="submit" class="btn btn-info btn-block" style="width: 100%;" data-bind="click: ajaxLogin">دخول</button>
+            </form>
+        </div>
+    </div>
+</div>

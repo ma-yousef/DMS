@@ -1,0 +1,197 @@
+﻿<div class="btn-toolbar">
+    <div class="well inline-form">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="control-group">
+                    <input type="text" class="input-small" data-bind="value: serial, attr: { placeholder: locales.txtDocummentSerial }">
+                    <input type="text" class="input-small" data-bind="value: externalSerial, attr: { placeholder: locales.txtExternalId }">
+                    <select class="span3" data-bind="options: departmentList, optionsText: 'Name', value: selectedDepartment, optionsCaption: locales.lstDepartmentsCaption">
+                    </select>
+                    <select class="span3" data-bind="options: registryList, optionsText: 'Name', value: selectedregistry, optionsCaption: locales.lstRegistryCaption">
+                    </select>
+                    <select class="span2" data-bind="options: documentStatusList, optionsText: 'Name', value: selectedStatus, optionsCaption: locales.lstDocumentStatusCaption">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="control-group">
+                    <span class="control-label">من</span>
+                    <input type="text" class="datepicker" placeholder="من تاريخ" data-bind="datepicker: fromDate, attr: { placeholder: locales.lblFromDate }">
+                    <span class="control-label">الى</span>
+                    <input type="text" class="datepicker" placeholder="الى تاريخ" data-bind="datepicker: toDate, attr: { placeholder: locales.lblToDate }">
+                    <button type="button" class="btn" data-bind="click: search" style="margin-top: -7px;">
+                        <span data-bind="text: locales.btnSearch"></span><i class="icon-search" style="vertical-align: text-bottom;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <a class="btn blue hidden-print" onclick="javascript:window.print();">Print <i class="icon-print icon-big"></i></a>
+        <a href="../../../Views/Default/rView.aspx" target="_blank">print</a>
+    </div>
+</div>
+<div class="well" id="documentList">
+    <table class="table" id="tablePrint">
+        <thead>
+            <tr>
+                <th data-bind="text: locales.tblDocumentSerial"></th>
+                <th data-bind="text: locales.tblExternalId"></th>
+                <th data-bind="text: locales.tblDocumentDate"></th>
+                <th data-bind="text: locales.tblRegistry"></th>
+                <th data-bind="text: locales.tblDestination"></th>
+                <th data-bind="text: locales.tblIssue"></th>
+                <th style="background-color: #e0eaf0;" data-bind="text: locales.tblStatus"></th>
+                <th style="background-color: #e0eaf0;"></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: documentList">
+            <tr data-bind="css: LateCssClass()">
+                <td data-bind="text: Serial"></td>
+                <td data-bind="text: ExternalId"></td>
+                <td data-bind="date: Date"></td>
+                <td data-bind="text: Registry().Name"></td>
+                <td data-bind="text: Department().Name"></td>
+                <td data-bind="text: Issue().Name"></td>
+                <td style="background-color: #e0eaf0;">
+                    <span class="label" data-bind="text: DocumentStatus().Name, css: StatusCssClass()"></span>
+                </td>
+                <td style="background-color: #ECF1F5; width: 150px;">
+
+                    
+                </td>
+                <td style="width: 150px;">
+                    <div class="btn-group">
+                        <a class="btn" data-bind="click: $root.openDocumentView, attr: { title: $root.locales.btnViewDocument }"><i class="icon-eye-open" style="margin-top: 2px;"></i></a>
+                        <a class="btn" data-toggle="modal" href="#modalHistoryDocument" data-bind="click: $root.openDocumentHistory, attr: { title: $root.locales.btnDocumentHistory }"><i class="icon-list" style="margin-top: 2px;"></i></a>
+                        <a class="btn" data-toggle="modal" href="#modalHistoryDocument" data-bind="click: $root.openDocumentRelation, attr: { title: $root.locales.btnRelatedDocuments }"><i class="icon-resize-small" style="margin-top: 2px;"></i></a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="9">
+                    <div class="pagination">
+                        <ul data-bind="foreach: pagerList">
+                            <li><a href="#" data-bind="text: text, click: $root.pageIndexChanged"></a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<a id="openChangeStatusModal" data-toggle="modal" href="#modalChangeStatus" style="display: none;"></a>
+<a id="openProcedureStatusModel" data-toggle="modal" href="#modalChangeProcedureStatus" style="display: none;"></a>
+<a id="openResponsesModal" data-toggle="modal" href="#modalAddResponse" style="display: none;"></a>
+
+<div class="modal hide fade" id="modalHistoryDocument" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close modalEditDocumentClose" id="closeModal" data-dismiss="modal">x</button>
+        <h3><i class="icon-list" style="vertical-align: baseline; margin-left: 5px;"></i><span data-bind="text: locales.modalDocumentHistoryTitle"></span> [<span style="margin: 5px;" data-bind="    text: historyDocumentSerial"></span>]</h3>
+    </div>
+    <div class="modal-body" style="height: 400px; overflow-y: auto;">
+        <!-- ko if: !isRelation()-->
+        <div class="row-fluid">
+            <div class="span6">
+                <span data-bind="text: locales.lblDocumentCurrentUser"></span>
+                <span class="label label-info" style="font-size: small" data-bind="text: documentCurrentUser"></span>
+            </div>
+            <div class="span6">
+                <span data-bind="text: locales.lblDocumentExpiryDate"></span>
+                <span class="label label-info" style="font-size: small" data-bind="date: documentExpiryDate"></span>
+            </div>
+        </div>
+        <hr />
+        <div class="tabbable">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab" data-bind="text: locales.tabDocumentHistory"></a>
+                </li>
+                <li><a href="#tab2" data-toggle="tab" data-bind="text: locales.tabDocumentProcedures"></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th data-bind="text: locales.tblDocumentStatus"></th>
+                                <th data-bind="text: locales.tblStatusDate"></th>
+                                <th data-bind="text: locales.tblStatusUser"></th>
+                                <th data-bind="text: locales.tblStatusNotes"></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: historyDocument">
+                            <tr>
+                                <td data-bind="text: DocumentStatus().Name"></td>
+                                <td data-bind="date: Date()"></td>
+                                <td data-bind="text: User().Name"></td>
+                                <td data-bind="text: Notes()"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th data-bind="text: locales.tblProcedureName"></th>
+                                <th data-bind="text: locales.tblProcedureStatus"></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: documentProcedure">
+                            <tr>
+                                <td data-bind="text: Procedure().Name"></td>
+                                <td>
+                                    <div class="control-group" style="padding-right: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 0px;">
+                                        <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: $parent.procedureStatus, optionsText: 'Name', optionsValue: 'Id', value: ProcedureStatusId" disabled="disabled">
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: isRelation()-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>رقم القيد</th>
+                    <th>التاريخ</th>
+                    <th>سجل القيد</th>
+                    <th>رقم القيد الخارجى</th>
+                    <th>جهة الصادر</th>
+                    <th>الموضوع</th>
+                    <th>الحاله</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: documentRelation">
+                <tr>
+                    <td data-bind="text: Serial"></td>
+                    <td data-bind="date: Date"></td>
+                    <td data-bind="text: Registry().Name"></td>
+                    <td data-bind="text: ExternalId"></td>
+                    <td data-bind="text: Department().Name"></td>
+                    <td data-bind="text: Issue().Name"></td>
+                    <td data-bind="text: DocumentStatus().Name"></td>
+
+
+                </tr>
+            </tbody>
+        </table>
+        <!-- /ko -->
+    </div>
+</div>
+
+

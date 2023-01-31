@@ -1,0 +1,114 @@
+E:\Private\DMS\DMS.Services\bin\Debug\DMS.Services.dll.config
+E:\Private\DMS\DMS.Services\bin\Debug\DMS.Services.dll
+E:\Private\DMS\DMS.Services\bin\Debug\DMS.Services.pdb
+E:\Private\DMS\DMS.Services\bin\Debug\Autofac.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Breeze.WebApi.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Breeze.WebApi.EF.dll
+E:\Private\DMS\DMS.Services\bin\Debug\EntityFramework.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Newtonsoft.Json.dll
+E:\Private\DMS\DMS.Services\bin\Debug\System.Web.Http.OData.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Microsoft.Data.OData.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Microsoft.Data.Edm.dll
+E:\Private\DMS\DMS.Services\bin\Debug\System.Spatial.dll
+E:\Private\DMS\DMS.Services\bin\Debug\Autofac.xml
+E:\Private\DMS\DMS.Services\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Private\DMS\DMS.Services\bin\Debug\EntityFramework.xml
+E:\Private\DMS\DMS.Services\bin\Debug\Newtonsoft.Json.xml
+E:\Private\DMS\DMS.Services\bin\Debug\System.Web.Http.OData.xml
+E:\Private\DMS\DMS.Services\bin\Debug\Microsoft.Data.OData.xml
+E:\Private\DMS\DMS.Services\bin\Debug\Microsoft.Data.Edm.xml
+E:\Private\DMS\DMS.Services\bin\Debug\System.Spatial.xml
+E:\Private\DMS\DMS.Services\bin\Debug\de\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\es\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\it\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\de\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\es\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\fr\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\it\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ja\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ko\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\ru\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\zh-Hans\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\bin\Debug\zh-Hant\System.Spatial.resources.dll
+E:\Private\DMS\DMS.Services\obj\Debug\DMS.Services.dll
+E:\Private\DMS\DMS.Services\obj\Debug\DMS.Services.pdb
+E:\Private\DMS\DMS.Services\bin\Debug\System.Web.Mvc.dll
+E:\Private\DMS\DMS.Services\bin\Debug\System.Web.Mvc.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\DMS.Services.dll.config
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\DMS.Services.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\DMS.Services.pdb
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Autofac.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Breeze.WebApi.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Breeze.WebApi.EF.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\EntityFramework.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Newtonsoft.Json.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Web.Http.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Web.Http.OData.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Net.Http.Formatting.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.Data.OData.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.Data.Edm.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Spatial.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Autofac.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\EntityFramework.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Newtonsoft.Json.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Web.Mvc.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Web.Http.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Web.Http.OData.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Net.Http.Formatting.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.Data.OData.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\Microsoft.Data.Edm.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\System.Spatial.xml
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\de\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\es\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\it\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\de\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\es\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\fr\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\it\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ja\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ko\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\ru\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\zh-Hans\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\bin\Debug\zh-Hant\System.Spatial.resources.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\obj\Debug\DMS.Services.csprojAssemblyReference.cache
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\obj\Debug\DMS.Services.csproj.CoreCompileInputs.cache
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\obj\Debug\DMS.Services.csproj.CopyComplete
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\obj\Debug\DMS.Services.dll
+D:\Personal\HDD Backup\Projects\DMS\DMS.Services\obj\Debug\DMS.Services.pdb

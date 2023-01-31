@@ -1,0 +1,176 @@
+﻿<div class="btn-toolbar">
+    <div class="well form-inline">
+        <input type="text" class="input-large" placeholder="اسم المستخدم" data-bind="value: searchName">
+        <select class="span3" data-bind="options: departmentList, optionsText: 'Name', value: selectedDepartment, optionsCaption: 'اختر الجهه...'">
+        </select>
+        <button type="button" class="btn" data-bind="click: searchUsers">بحث<i class="icon-search" style="vertical-align: text-bottom;"></i></button>
+        <a class="btn btn-primary" data-toggle="modal" href="#modalAddUser" data-bind="click: openAddUserModal">مستخدم جديد<i class="icon-user icon-white" style="vertical-align: text-bottom"></i></a>
+    </div>
+</div>
+<div class="well" id="userList">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>الإسم</th>
+                <th>اسم المستخدم</th>
+                <th>الجهه</th>
+                <th>الرئيس المباشر</th>
+                <th>رقم التليفون</th>
+                <th>البريد الالكترونى</th>
+                <th>حساب فعال</th>
+                <th style="width: 80px;"></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: usersList">
+            <tr>
+                <td data-bind="text: Name"></td>
+                <td data-bind="text: UserName"></td>
+                <td data-bind="text: DepartmentName"></td>
+                <td data-bind="text: SupervisorName"></td>
+                <td data-bind="text: MobileNo"></td>
+                <td data-bind="text: Email"></td>
+                <td>
+                    <input type="checkbox" data-bind="checked: Active" />
+                </td>
+                <td>
+                    <a data-toggle="modal" class="btn" href="#modalAddUser" data-bind="click: $root.editUser">تعديل<i class="icon-edit" style="margin-right: 5px; margin-top: 2px;"></i></a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8">
+                    <div class="pagination">
+                        <ul data-bind="foreach: pagerList">
+                            <li><a href="#" data-bind="text: text, click: $root.pageIndexChanged"></a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Are you sure you want to delete the user?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+    </div>
+</div>
+<div class="modal hide fade" id="modalAddUser" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close" id="closemodalAddUser" data-dismiss="modal">x</button>
+        <h3><i class="icon-user" style="vertical-align: baseline; margin-left: 5px;"></i>اضافة مستخدم جديد</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="span12 ">
+                <div class="control-group" data-bind="css: { 'error': !user.userName.isValid() }">
+                    <label class="control-label">اسم المستخدم</label>
+                    <div class="controls">
+                        <input type="text" placeholder="" class="input-large" data-bind="value: user.userName, event: { change: checkUserName }, disable: user.isEdit() ">
+                        <img src="../../../Content/images/loading.gif" id="checkUserNameLoading" style="margin-right: 5px; margin-top: -5px; display: none;" />
+                        <span data-bind="style: { color: user.userNameExists() ? 'red' : 'green' }, text: user.userNameMsg" style="margin-right: 5px; margin-top: -5px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ko if: !user.isEdit() -->
+        <div class="row-fluid">
+            <div class="span5 ">
+                <div class="control-group" data-bind="css: { 'error': !user.password.isValid() }">
+                    <label class="control-label">كلمة السر</label>
+                    <div class="controls">
+                        <input type="password" placeholder="" class="input-large" data-bind="value: user.password">
+                    </div>
+                </div>
+            </div>
+            <div class="span5 ">
+                <div class="control-group" data-bind="css: { 'error': !user.confirmPassword.isValid() }">
+                    <label class="control-label">تأكيد كلمة السر</label>
+                    <div class="controls">
+                        <input type="password" placeholder="" class="input-large" data-bind="value: user.confirmPassword">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+        <hr />
+        <div class="control-group" data-bind="css: { 'error': !user.name.isValid() }">
+            <label class="control-label">الإسم</label>
+            <div class="controls">
+                <input type="text" placeholder="" class="span3" data-bind="value: user.name">
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6 ">
+                <div class="control-group" data-bind="css: { 'error': !user.departmentId.isValid() }">
+                    <label class="control-label">الجهه</label>
+                    <div class="controls">
+                        <select class="span3" data-bind="options: departmentList, optionsText: 'Name', optionsValue: 'Id', value: user.departmentId, optionsCaption: 'اختر الجهه...', event: { change: selectedDepartmentChanged }">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="span6 ">
+                <div class="control-group">
+                    <label class="control-label">الرئيس المباشر</label>
+                    <div class="input-prepend">
+                        <select class="span3" data-bind="options: supervisorList, optionsText: 'Name', optionsValue: 'Id', value: user.supervisorId, optionsCaption: 'اختر...'">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6 ">
+                <div class="control-group">
+                    <label class="control-label">رقم الهاتف</label>
+                    <div class="controls">
+                        <input type="text" placeholder="" class="input-xlarge" data-bind="value: user.mobileNo">
+                    </div>
+                </div>
+            </div>
+            <div class="span6 ">
+                <div class="control-group">
+                    <label class="control-label">البريد الالكترونى</label>
+                    <div class="controls">
+                        <input type="text" placeholder="" class="input-xlarge" data-bind="value: user.email">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row-fluid">
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox" for="save_card">
+                        <input type="checkbox" data-bind="checked: user.isAllDocument" />
+                        <span>كل الوثائق</span>
+                    </label>
+                </div>
+                <div class="controls">
+                    <label class="checkbox" for="save_card">
+                        <input type="checkbox" data-bind="checked: user.isAssistantMgr" />
+                        <span>مساعد المدير</span>
+                    </label>
+                </div>
+                <div class="controls" data-bind="foreach: user.rolesList">
+                    <label class="checkbox" for="save_card">
+                        <input type="checkbox" data-bind="checked: selected" />
+                        <span data-bind="text: name"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: saveUser">حفظ<i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>

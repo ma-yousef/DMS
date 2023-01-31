@@ -1,0 +1,1062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DMSModelStoreContainer">
+    <EntitySet Name="Attachment" EntityType="DMSModel.Store.Attachment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AttachmentType" EntityType="DMSModel.Store.AttachmentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Department" EntityType="DMSModel.Store.Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DepartmentType" EntityType="DMSModel.Store.DepartmentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DirectionType" EntityType="DMSModel.Store.DirectionType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Document" EntityType="DMSModel.Store.Document" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentHistory" EntityType="DMSModel.Store.DocumentHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentProcedure" EntityType="DMSModel.Store.DocumentProcedure" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentStatus" EntityType="DMSModel.Store.DocumentStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentStatusReason" EntityType="DMSModel.Store.DocumentStatusReason" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentType" EntityType="DMSModel.Store.DocumentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImportanceLevel" EntityType="DMSModel.Store.ImportanceLevel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Issue" EntityType="DMSModel.Store.Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nationality" EntityType="DMSModel.Store.Nationality" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notification" EntityType="DMSModel.Store.Notification" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NotificationType" EntityType="DMSModel.Store.NotificationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Procedure" EntityType="DMSModel.Store.Procedure" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProcedureStatus" EntityType="DMSModel.Store.ProcedureStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReadOnlyDepartment" EntityType="DMSModel.Store.ReadOnlyDepartment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReadOnlyType" EntityType="DMSModel.Store.ReadOnlyType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReadOnlyUser" EntityType="DMSModel.Store.ReadOnlyUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Registry" EntityType="DMSModel.Store.Registry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RelatedPerson" EntityType="DMSModel.Store.RelatedPerson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequiredProcedure" EntityType="DMSModel.Store.RequiredProcedure" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SecurityLevel" EntityType="DMSModel.Store.SecurityLevel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SentDocument" EntityType="DMSModel.Store.SentDocument" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="DMSModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="DMSModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="DMSModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="DMSModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="DMSModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Attachment_AttachmentType" Association="DMSModel.Store.FK_Attachment_AttachmentType">
+      <End Role="AttachmentType" EntitySet="AttachmentType" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attachment_Document" Association="DMSModel.Store.FK_Attachment_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Department_Department" Association="DMSModel.Store.FK_Department_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Department1" EntitySet="Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Department_DepartmentType" Association="DMSModel.Store.FK_Department_DepartmentType">
+      <End Role="DepartmentType" EntitySet="DepartmentType" />
+      <End Role="Department" EntitySet="Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_Department" Association="DMSModel.Store.FK_Document_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_Department1" Association="DMSModel.Store.FK_Document_Department1">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_DirectionType" Association="DMSModel.Store.FK_Document_DirectionType">
+      <End Role="DirectionType" EntitySet="DirectionType" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_Document" Association="DMSModel.Store.FK_Document_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="Document1" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_DocumentStatus" Association="DMSModel.Store.FK_Document_DocumentStatus">
+      <End Role="DocumentStatus" EntitySet="DocumentStatus" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_DocumentType" Association="DMSModel.Store.FK_Document_DocumentType">
+      <End Role="DocumentType" EntitySet="DocumentType" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_ImportanceLevel" Association="DMSModel.Store.FK_Document_ImportanceLevel">
+      <End Role="ImportanceLevel" EntitySet="ImportanceLevel" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_Issue" Association="DMSModel.Store.FK_Document_Issue">
+      <End Role="Issue" EntitySet="Issue" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_Registry" Association="DMSModel.Store.FK_Document_Registry">
+      <End Role="Registry" EntitySet="Registry" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_SecurityLevel" Association="DMSModel.Store.FK_Document_SecurityLevel">
+      <End Role="SecurityLevel" EntitySet="SecurityLevel" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_User" Association="DMSModel.Store.FK_Document_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_User1" Association="DMSModel.Store.FK_Document_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentHistory_Document" Association="DMSModel.Store.FK_DocumentHistory_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="DocumentHistory" EntitySet="DocumentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentHistory_DocumentStatus" Association="DMSModel.Store.FK_DocumentHistory_DocumentStatus">
+      <End Role="DocumentStatus" EntitySet="DocumentStatus" />
+      <End Role="DocumentHistory" EntitySet="DocumentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentHistory_User" Association="DMSModel.Store.FK_DocumentHistory_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="DocumentHistory" EntitySet="DocumentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentProcedure_Document" Association="DMSModel.Store.FK_DocumentProcedure_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="DocumentProcedure" EntitySet="DocumentProcedure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentProcedure_Procedure" Association="DMSModel.Store.FK_DocumentProcedure_Procedure">
+      <End Role="Procedure" EntitySet="Procedure" />
+      <End Role="DocumentProcedure" EntitySet="DocumentProcedure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentProcedure_ProcedureStatus" Association="DMSModel.Store.FK_DocumentProcedure_ProcedureStatus">
+      <End Role="ProcedureStatus" EntitySet="ProcedureStatus" />
+      <End Role="DocumentProcedure" EntitySet="DocumentProcedure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentStatusReason_DocumentStatus" Association="DMSModel.Store.FK_DocumentStatusReason_DocumentStatus">
+      <End Role="DocumentStatus" EntitySet="DocumentStatus" />
+      <End Role="DocumentStatusReason" EntitySet="DocumentStatusReason" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_NotificationType" Association="DMSModel.Store.FK_Notification_NotificationType">
+      <End Role="NotificationType" EntitySet="NotificationType" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_User" Association="DMSModel.Store.FK_Notification_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadOnlyDepartment_Department" Association="DMSModel.Store.FK_ReadOnlyDepartment_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="ReadOnlyDepartment" EntitySet="ReadOnlyDepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadOnlyDepartment_Document" Association="DMSModel.Store.FK_ReadOnlyDepartment_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="ReadOnlyDepartment" EntitySet="ReadOnlyDepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadOnlyDepartment_ReadOnlyType" Association="DMSModel.Store.FK_ReadOnlyDepartment_ReadOnlyType">
+      <End Role="ReadOnlyType" EntitySet="ReadOnlyType" />
+      <End Role="ReadOnlyDepartment" EntitySet="ReadOnlyDepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadOnlyUser_Document" Association="DMSModel.Store.FK_ReadOnlyUser_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="ReadOnlyUser" EntitySet="ReadOnlyUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadOnlyUser_ReadOnlyType" Association="DMSModel.Store.FK_ReadOnlyUser_ReadOnlyType">
+      <End Role="ReadOnlyType" EntitySet="ReadOnlyType" />
+      <End Role="ReadOnlyUser" EntitySet="ReadOnlyUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadOnlyUser_User" Association="DMSModel.Store.FK_ReadOnlyUser_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ReadOnlyUser" EntitySet="ReadOnlyUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RelatedPerson_Document" Association="DMSModel.Store.FK_RelatedPerson_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="RelatedPerson" EntitySet="RelatedPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RelatedPerson_Nationality" Association="DMSModel.Store.FK_RelatedPerson_Nationality">
+      <End Role="Nationality" EntitySet="Nationality" />
+      <End Role="RelatedPerson" EntitySet="RelatedPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequiredProcedure_Procedure" Association="DMSModel.Store.FK_RequiredProcedure_Procedure">
+      <End Role="Procedure" EntitySet="Procedure" />
+      <End Role="RequiredProcedure" EntitySet="RequiredProcedure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequiredProcedure_SentDocument" Association="DMSModel.Store.FK_RequiredProcedure_SentDocument">
+      <End Role="SentDocument" EntitySet="SentDocument" />
+      <End Role="RequiredProcedure" EntitySet="RequiredProcedure" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="DMSModel.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentDocument_Document" Association="DMSModel.Store.FK_SentDocument_Document">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="SentDocument" EntitySet="SentDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentDocument_DocumentStatus" Association="DMSModel.Store.FK_SentDocument_DocumentStatus">
+      <End Role="DocumentStatus" EntitySet="DocumentStatus" />
+      <End Role="SentDocument" EntitySet="SentDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentDocument_DocumentStatusReason" Association="DMSModel.Store.FK_SentDocument_DocumentStatusReason">
+      <End Role="DocumentStatusReason" EntitySet="DocumentStatusReason" />
+      <End Role="SentDocument" EntitySet="SentDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentDocument_User" Association="DMSModel.Store.FK_SentDocument_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="SentDocument" EntitySet="SentDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentDocument_User1" Association="DMSModel.Store.FK_SentDocument_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="SentDocument" EntitySet="SentDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Department" Association="DMSModel.Store.FK_User_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Supervisor" Association="DMSModel.Store.FK_User_Supervisor">
+      <End Role="User" EntitySet="User" />
+      <End Role="User1" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_webpages_Membership_User" Association="DMSModel.Store.FK_webpages_Membership_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="webpages_Membership" EntitySet="webpages_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_webpages_UsersInRoles_User" Association="DMSModel.Store.FK_webpages_UsersInRoles_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="AttachmentTypeId" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="FileName" Type="nvarchar(max)" />
+    <Property Name="IsResponse" Type="bit" />
+  </EntityType>
+  <EntityType Name="AttachmentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DepartmentTypeId" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="OrderId" Type="int" />
+  </EntityType>
+  <EntityType Name="DepartmentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DirectionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Serial" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="IssueId" Type="int" Nullable="false" />
+    <Property Name="RegistryId" Type="int" Nullable="false" />
+    <Property Name="SourceId" Type="int" Nullable="false" />
+    <Property Name="DestinationId" Type="int" Nullable="false" />
+    <Property Name="DirectionTypeId" Type="int" Nullable="false" />
+    <Property Name="ExternalId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="DocumentTypeId" Type="int" Nullable="false" />
+    <Property Name="ImportanceLevelId" Type="int" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="CurrentUserId" Type="int" Nullable="false" />
+    <Property Name="DocumentStatusId" Type="int" Nullable="false" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="NeedAnswer" Type="bit" Nullable="false" />
+    <Property Name="SecurityLevelId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="DocumentStatusId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DocumentProcedure">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+      <PropertyRef Name="ProcedureId" />
+    </Key>
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="ProcedureId" Type="int" Nullable="false" />
+    <Property Name="ProcedureStatusId" Type="int" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DocumentStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DocumentStatusReason">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DocumentStatusId" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentStatusId" Type="int" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImportanceLevel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DefaultExpiry" Type="int" />
+  </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nationality">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationTypeId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Keys" Type="nvarchar" MaxLength="100" />
+    <Property Name="Data" Type="nvarchar" MaxLength="100" />
+    <Property Name="Read" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NotificationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Link" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Procedure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcedureStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ReadOnlyDepartment">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="ReadOnlyTypeId" />
+    </Key>
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="ReadOnlyTypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReadOnlyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ReadOnlyUser">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="ReadOnlyTypeId" />
+    </Key>
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ReadOnlyTypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RelatedPerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DoumentId" Type="int" Nullable="false" />
+    <Property Name="NationalId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="NationalityId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequiredProcedure">
+    <Key>
+      <PropertyRef Name="SentDocumentId" />
+      <PropertyRef Name="ProcedureId" />
+    </Key>
+    <Property Name="SentDocumentId" Type="int" Nullable="false" />
+    <Property Name="ProcedureId" Type="int" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SecurityLevel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SentDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="FromUserId" Type="int" Nullable="false" />
+    <Property Name="ToUserId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="ReasonId" Type="int" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="Canceled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="SupervisorId" Type="int" />
+    <Property Name="IsAssistantMgr" Type="bit" />
+    <Property Name="IsAllDocument" Type="bit" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Attachment_AttachmentType">
+    <End Role="AttachmentType" Type="DMSModel.Store.AttachmentType" Multiplicity="1" />
+    <End Role="Attachment" Type="DMSModel.Store.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttachmentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="AttachmentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attachment_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="Attachment" Type="DMSModel.Store.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Department_Department">
+    <End Role="Department" Type="DMSModel.Store.Department" Multiplicity="0..1" />
+    <End Role="Department1" Type="DMSModel.Store.Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Department1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Department_DepartmentType">
+    <End Role="DepartmentType" Type="DMSModel.Store.DepartmentType" Multiplicity="1" />
+    <End Role="Department" Type="DMSModel.Store.Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Department">
+        <PropertyRef Name="DepartmentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_Department">
+    <End Role="Department" Type="DMSModel.Store.Department" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="SourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_Department1">
+    <End Role="Department" Type="DMSModel.Store.Department" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="DestinationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_DirectionType">
+    <End Role="DirectionType" Type="DMSModel.Store.DirectionType" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DirectionType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="DirectionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="0..1" />
+    <End Role="Document1" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_DocumentStatus">
+    <End Role="DocumentStatus" Type="DMSModel.Store.DocumentStatus" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_DocumentType">
+    <End Role="DocumentType" Type="DMSModel.Store.DocumentType" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_ImportanceLevel">
+    <End Role="ImportanceLevel" Type="DMSModel.Store.ImportanceLevel" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImportanceLevel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="ImportanceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_Issue">
+    <End Role="Issue" Type="DMSModel.Store.Issue" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="IssueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_Registry">
+    <End Role="Registry" Type="DMSModel.Store.Registry" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="RegistryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_SecurityLevel">
+    <End Role="SecurityLevel" Type="DMSModel.Store.SecurityLevel" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecurityLevel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="SecurityLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_User1">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="CurrentUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentHistory_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="DocumentHistory" Type="DMSModel.Store.DocumentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentHistory">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentHistory_DocumentStatus">
+    <End Role="DocumentStatus" Type="DMSModel.Store.DocumentStatus" Multiplicity="1" />
+    <End Role="DocumentHistory" Type="DMSModel.Store.DocumentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentHistory">
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentHistory_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="DocumentHistory" Type="DMSModel.Store.DocumentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentHistory">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentProcedure_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="DocumentProcedure" Type="DMSModel.Store.DocumentProcedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentProcedure">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentProcedure_Procedure">
+    <End Role="Procedure" Type="DMSModel.Store.Procedure" Multiplicity="1" />
+    <End Role="DocumentProcedure" Type="DMSModel.Store.DocumentProcedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procedure">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentProcedure">
+        <PropertyRef Name="ProcedureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentProcedure_ProcedureStatus">
+    <End Role="ProcedureStatus" Type="DMSModel.Store.ProcedureStatus" Multiplicity="1" />
+    <End Role="DocumentProcedure" Type="DMSModel.Store.DocumentProcedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcedureStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentProcedure">
+        <PropertyRef Name="ProcedureStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentStatusReason_DocumentStatus">
+    <End Role="DocumentStatus" Type="DMSModel.Store.DocumentStatus" Multiplicity="1" />
+    <End Role="DocumentStatusReason" Type="DMSModel.Store.DocumentStatusReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentStatusReason">
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_NotificationType">
+    <End Role="NotificationType" Type="DMSModel.Store.NotificationType" Multiplicity="1" />
+    <End Role="Notification" Type="DMSModel.Store.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotificationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="NotificationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="Notification" Type="DMSModel.Store.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadOnlyDepartment_Department">
+    <End Role="Department" Type="DMSModel.Store.Department" Multiplicity="1" />
+    <End Role="ReadOnlyDepartment" Type="DMSModel.Store.ReadOnlyDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadOnlyDepartment">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadOnlyDepartment_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="ReadOnlyDepartment" Type="DMSModel.Store.ReadOnlyDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadOnlyDepartment">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadOnlyDepartment_ReadOnlyType">
+    <End Role="ReadOnlyType" Type="DMSModel.Store.ReadOnlyType" Multiplicity="1" />
+    <End Role="ReadOnlyDepartment" Type="DMSModel.Store.ReadOnlyDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadOnlyType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadOnlyDepartment">
+        <PropertyRef Name="ReadOnlyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadOnlyUser_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="ReadOnlyUser" Type="DMSModel.Store.ReadOnlyUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadOnlyUser">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadOnlyUser_ReadOnlyType">
+    <End Role="ReadOnlyType" Type="DMSModel.Store.ReadOnlyType" Multiplicity="1" />
+    <End Role="ReadOnlyUser" Type="DMSModel.Store.ReadOnlyUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadOnlyType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadOnlyUser">
+        <PropertyRef Name="ReadOnlyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadOnlyUser_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="ReadOnlyUser" Type="DMSModel.Store.ReadOnlyUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadOnlyUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RelatedPerson_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="RelatedPerson" Type="DMSModel.Store.RelatedPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RelatedPerson">
+        <PropertyRef Name="DoumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RelatedPerson_Nationality">
+    <End Role="Nationality" Type="DMSModel.Store.Nationality" Multiplicity="1" />
+    <End Role="RelatedPerson" Type="DMSModel.Store.RelatedPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nationality">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RelatedPerson">
+        <PropertyRef Name="NationalityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequiredProcedure_Procedure">
+    <End Role="Procedure" Type="DMSModel.Store.Procedure" Multiplicity="1" />
+    <End Role="RequiredProcedure" Type="DMSModel.Store.RequiredProcedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procedure">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequiredProcedure">
+        <PropertyRef Name="ProcedureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequiredProcedure_SentDocument">
+    <End Role="SentDocument" Type="DMSModel.Store.SentDocument" Multiplicity="1" />
+    <End Role="RequiredProcedure" Type="DMSModel.Store.RequiredProcedure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SentDocument">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequiredProcedure">
+        <PropertyRef Name="SentDocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="DMSModel.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="DMSModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentDocument_Document">
+    <End Role="Document" Type="DMSModel.Store.Document" Multiplicity="1" />
+    <End Role="SentDocument" Type="DMSModel.Store.SentDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SentDocument">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentDocument_DocumentStatus">
+    <End Role="DocumentStatus" Type="DMSModel.Store.DocumentStatus" Multiplicity="0..1" />
+    <End Role="SentDocument" Type="DMSModel.Store.SentDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SentDocument">
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentDocument_DocumentStatusReason">
+    <End Role="DocumentStatusReason" Type="DMSModel.Store.DocumentStatusReason" Multiplicity="0..1" />
+    <End Role="SentDocument" Type="DMSModel.Store.SentDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatusReason">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DocumentStatusId" />
+      </Principal>
+      <Dependent Role="SentDocument">
+        <PropertyRef Name="ReasonId" />
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentDocument_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="SentDocument" Type="DMSModel.Store.SentDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SentDocument">
+        <PropertyRef Name="FromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentDocument_User1">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="SentDocument" Type="DMSModel.Store.SentDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SentDocument">
+        <PropertyRef Name="ToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Department">
+    <End Role="Department" Type="DMSModel.Store.Department" Multiplicity="1" />
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Supervisor">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="0..1" />
+    <End Role="User1" Type="DMSModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="SupervisorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_webpages_Membership_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="webpages_Membership" Type="DMSModel.Store.webpages_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="webpages_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_webpages_UsersInRoles_User">
+    <End Role="User" Type="DMSModel.Store.User" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="DMSModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

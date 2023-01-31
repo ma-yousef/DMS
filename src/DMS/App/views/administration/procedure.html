@@ -1,0 +1,50 @@
+﻿<div id="procedure">
+    <div id="headdepartment" class="well">
+        <div class="control-group" data-bind="css: { 'error': !name.isValid() }">
+        <label>اسم الإجراء: </label>
+        <input type="text" data-bind="value: name">
+            </div>
+        
+        <button type="button" class="btn btn-primary" data-bind="click: saveDocumentType"><i class="icon-plus icon-white"></i> حفظ </button>
+   
+    </div>
+    
+    <div id="bodydepartment" class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>رقم الإجراء</th>
+                    <th>اسم الاجراء</th>
+                    <th>الفاعلية </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: procedure">
+                <tr>
+                    <td data-bind="text: Id"></td>
+                    <td data-bind="text: Name"></td>
+                    <td><input type="checkbox" data-bind="checked: Active" /></td>
+                    <td>
+                    <a data-toggle="modal" class="btn" href="#modalEditProcedure" data-bind="click: $root.openEditProcedure"><i class="icon-edit" style="margin-right: 5px; margin-top: 2px;"></i></a>
+                </td>
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
+</div>
+<div class="modal hide fade" id="modalEditProcedure" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close" id="closemodalAddUser" data-dismiss="modal">x</button>
+    </div>
+    <div class="modal-body">
+        <div class="control-group" data-bind="css: { 'error': !name1.isValid() }">
+                <label class="control-label">اسم الإجراء: </label>
+                <div class="controls">
+                    <input type="text" data-bind="value: name1">
+                </div >
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: editProcedure">حفظ<i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>

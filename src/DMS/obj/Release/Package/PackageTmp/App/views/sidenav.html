@@ -1,0 +1,44 @@
+﻿<div class="sidebar-nav">
+    <div class="well" style="padding: 8px 0;">
+        <!-- ko if: adminRouts().length > 0 -->
+        <ul class="nav nav-list">
+            <li class="nav-header"><h3>إعدادات عامه</h3></li>
+            <li class="divider"></li>
+            <!-- ko foreach: adminRouts -->
+            <li data-bind="css: { active: $root.router.activeRoute().url == url }"><a href="#" data-bind="attr: { href: hash }, text: name"></a></li>
+            <!-- /ko -->
+        </ul>
+        <br />
+        <!-- /ko -->
+        <!-- ko if: reportsRouts().length > 0 -->
+        <ul class="nav nav-list">
+            <li class="nav-header"><h3></h3></li>
+            <li class="divider"></li>
+            <!-- ko foreach: reportsRouts -->
+            <li data-bind="css: { active: $root.router.activeRoute().url == url }"><a href="#" data-bind="attr: { href: hash }, text: name"></a></li>
+            <!-- /ko -->
+        </ul>
+        <br />
+        <!-- /ko -->
+        <!-- ko if: incomingRouts().length > 0 -->
+        <ul class="nav nav-list">
+            <li class="nav-header"><h3>الوارد</h3></li>
+            <li class="divider"></li>
+            <!-- ko foreach: incomingRouts -->
+            <li data-bind="css: { active: $root.router.activeRoute().url == url }"><a href="#" data-bind="attr: { href: hash }, text: name"></a></li>
+            <!-- /ko -->
+        </ul>
+        <br />
+        <!-- /ko -->
+        <!-- ko if: outgoingRouts().length > 0 -->
+        <ul class="nav nav-list">
+            <li class="nav-header"><h3>الصادر</h3></li>
+            <li class="divider"></li>
+            <!-- ko foreach: outgoingRouts -->
+            <li data-bind="css: { active: $root.router.activeRoute() == url }"><a href="#" data-bind="attr: { href: hash }, text: name"></a></li>
+            <!-- /ko -->
+        </ul>
+        <br />
+        <!-- /ko -->
+    </div>
+</div>

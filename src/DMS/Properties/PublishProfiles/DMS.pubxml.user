@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Private\DMS\DMS Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App/ajaxlogin.js">
+      <publishTime>11/27/2013 22:34:53</publishTime>
+    </File>
+    <File Include="App/barchart.js">
+      <publishTime>02/17/2014 17:21:35</publishTime>
+    </File>
+    <File Include="App/durandal/amd/almond-custom.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/amd/optimizer.exe">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/amd/r.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/amd/require.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/amd/text.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/app.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/composition.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/events.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/http.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/messageBox.html">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/messageBox.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/modalDialog.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/plugins/router.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/system.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/transitions/entrance.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/viewEngine.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/viewLocator.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/viewModel.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/viewModelBinder.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/durandal/widget.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="App/main.js">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="App/model/administration.js">
+      <publishTime>10/15/2013 07:24:20</publishTime>
+    </File>
+    <File Include="App/model/modelbuilder.js">
+      <publishTime>11/26/2013 10:39:14</publishTime>
+    </File>
+    <File Include="App/services/administration.uow.js">
+      <publishTime>06/16/2014 21:30:59</publishTime>
+    </File>
+    <File Include="App/services/document.uow.js">
+      <publishTime>02/16/2014 12:20:31</publishTime>
+    </File>
+    <File Include="App/services/entitymanagerprovider.js">
+      <publishTime>11/24/2013 17:26:02</publishTime>
+    </File>
+    <File Include="App/services/errorhandler.js">
+      <publishTime>10/04/2013 04:57:03</publishTime>
+    </File>
+    <File Include="App/services/global.js">
+      <publishTime>01/29/2014 16:13:29</publishTime>
+    </File>
+    <File Include="App/services/logger.js">
+      <publishTime>10/07/2013 01:39:16</publishTime>
+    </File>
+    <File Include="App/services/repository.js">
+      <publishTime>10/25/2013 07:24:10</publishTime>
+    </File>
+    <File Include="App/services/unitofwork.js">
+      <publishTime>10/25/2013 17:12:13</publishTime>
+    </File>
+    <File Include="App/services/utilities.js">
+      <publishTime>10/04/2013 04:57:03</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/attachmenttype.js">
+      <publishTime>11/26/2013 12:43:44</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/Departments.js">
+      <publishTime>01/28/2014 15:34:20</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/documentstatusreasons.js">
+      <publishTime>11/26/2013 10:45:53</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/documenttype.js">
+      <publishTime>11/26/2013 12:43:44</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/importancelevellist.js">
+      <publishTime>11/26/2013 05:17:54</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/procedure.js">
+      <publishTime>11/26/2013 12:43:45</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/registry.js">
+      <publishTime>11/26/2013 12:43:45</publishTime>
+    </File>
+    <File Include="App/viewmodels/administration/userlist.js">
+      <publishTime>06/16/2014 21:30:58</publishTime>
+    </File>
+    <File Include="App/viewmodels/details.js">
+      <publishTime>10/04/2013 17:04:38</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/barchart.js">
+      <publishTime>02/17/2014 17:21:36</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/dashboard.js">
+      <publishTime>12/12/2015 22:03:18</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/documentincoming.js">
+      <publishTime>12/12/2015 22:03:49</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/documentoutcoming.js">
+      <publishTime>10/27/2013 09:39:10</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/documentoutcominglist.js">
+      <publishTime>10/31/2013 03:53:06</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/documentoutgoing.js">
+      <publishTime>12/12/2015 22:04:12</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/documentreview.js">
+      <publishTime>12/12/2015 22:04:25</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/incomingdocumentlist.js">
+      <publishTime>12/12/2015 22:04:43</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/locales/incomingdocumentlist-locales.js">
+      <publishTime>06/16/2014 21:30:59</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/outgoingdocumentlist.js">
+      <publishTime>11/03/2013 06:26:15</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/popularizationdocumentlist.js">
+      <publishTime>11/03/2013 06:07:10</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/readonlydocumentlist.js">
+      <publishTime>11/03/2013 06:06:49</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/receivedocument.js">
+      <publishTime>11/03/2013 05:14:41</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/sentdocumentlist.js">
+      <publishTime>02/17/2014 17:21:35</publishTime>
+    </File>
+    <File Include="App/viewmodels/document/transfeeredclosed.js">
+      <publishTime>12/12/2015 22:05:02</publishTime>
+    </File>
+    <File Include="App/viewmodels/home.js">
+      <publishTime>10/04/2013 17:04:00</publishTime>
+    </File>
+    <File Include="App/viewmodels/shell.js">
+      <publishTime>03/10/2014 22:31:59</publishTime>
+    </File>
+    <File Include="App/views/administration/attachmenttype.html">
+      <publishTime>11/26/2013 12:43:48</publishTime>
+    </File>
+    <File Include="App/views/administration/Departments.html">
+      <publishTime>01/28/2014 15:34:18</publishTime>
+    </File>
+    <File Include="App/views/administration/details.html">
+      <publishTime>10/08/2013 15:03:59</publishTime>
+    </File>
+    <File Include="App/views/administration/documentstatusreasons.html">
+      <publishTime>11/26/2013 10:59:21</publishTime>
+    </File>
+    <File Include="App/views/administration/documenttype.html">
+      <publishTime>11/26/2013 12:43:46</publishTime>
+    </File>
+    <File Include="App/views/administration/importancelevellist.html">
+      <publishTime>11/26/2013 05:16:19</publishTime>
+    </File>
+    <File Include="App/views/administration/procedure.html">
+      <publishTime>11/26/2013 12:43:46</publishTime>
+    </File>
+    <File Include="App/views/administration/registry.html">
+      <publishTime>11/26/2013 12:43:44</publishTime>
+    </File>
+    <File Include="App/views/administration/userlist.html">
+      <publishTime>03/15/2014 14:01:00</publishTime>
+    </File>
+    <File Include="App/views/document/barchart.html">
+      <publishTime>02/17/2014 17:21:35</publishTime>
+    </File>
+    <File Include="App/views/document/dashboard.html">
+      <publishTime>02/17/2014 17:21:35</publishTime>
+    </File>
+    <File Include="App/views/document/documentincoming.html">
+      <publishTime>04/29/2014 02:08:01</publishTime>
+    </File>
+    <File Include="App/views/document/documentoutcoming.html">
+      <publishTime>10/27/2013 09:35:29</publishTime>
+    </File>
+    <File Include="App/views/document/documentoutcominglist.html">
+      <publishTime>10/31/2013 03:53:07</publishTime>
+    </File>
+    <File Include="App/views/document/documentoutgoing.html">
+      <publishTime>02/17/2014 17:21:36</publishTime>
+    </File>
+    <File Include="App/views/document/documentreview.html">
+      <publishTime>12/12/2015 21:56:21</publishTime>
+    </File>
+    <File Include="App/views/document/incomingdocumentlist.html">
+      <publishTime>12/12/2015 21:52:39</publishTime>
+    </File>
+    <File Include="App/views/document/outgoingdocumentlist.html">
+      <publishTime>11/03/2013 06:31:29</publishTime>
+    </File>
+    <File Include="App/views/document/popularizationdocumentlist.html">
+      <publishTime>11/03/2013 06:14:58</publishTime>
+    </File>
+    <File Include="App/views/document/readonlydocumentlist.html">
+      <publishTime>11/03/2013 06:14:46</publishTime>
+    </File>
+    <File Include="App/views/document/receivedocument.html">
+      <publishTime>11/03/2013 06:15:18</publishTime>
+    </File>
+    <File Include="App/views/document/sentdocumentlist.html">
+      <publishTime>02/17/2014 17:21:36</publishTime>
+    </File>
+    <File Include="App/views/document/transfeeredclosed.html">
+      <publishTime>06/16/2014 21:30:57</publishTime>
+    </File>
+    <File Include="App/views/footer.html">
+      <publishTime>10/04/2013 17:02:44</publishTime>
+    </File>
+    <File Include="App/views/home.html">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="App/views/nav.html">
+      <publishTime>12/12/2015 22:02:29</publishTime>
+    </File>
+    <File Include="App/views/shell.html">
+      <publishTime>03/15/2014 14:01:00</publishTime>
+    </File>
+    <File Include="App/views/sidenav.html">
+      <publishTime>01/31/2014 06:54:49</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/10/2014 22:32:37</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>03/10/2014 22:31:59</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>07/26/2013 16:25:17</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.WebApi.dll">
+      <publishTime>03/10/2014 22:32:00</publishTime>
+    </File>
+    <File Include="bin/Breeze.WebApi.dll">
+      <publishTime>09/12/2013 07:02:34</publishTime>
+    </File>
+    <File Include="bin/Breeze.WebApi.EF.dll">
+      <publishTime>09/12/2013 07:02:35</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:18</publishTime>
+    </File>
+    <File Include="bin/de/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/DMS.dll">
+      <publishTime>12/12/2015 21:50:01</publishTime>
+    </File>
+    <File Include="bin/DMS.Services.dll">
+      <publishTime>12/12/2015 21:50:00</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/10/2014 22:32:08</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:20</publishTime>
+    </File>
+    <File Include="bin/es/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:15</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:19</publishTime>
+    </File>
+    <File Include="bin/fr/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/Irony.dll">
+      <publishTime>03/10/2014 22:32:02</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:15</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:21</publishTime>
+    </File>
+    <File Include="bin/it/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:20</publishTime>
+    </File>
+    <File Include="bin/ja/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:21</publishTime>
+    </File>
+    <File Include="bin/ko/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>03/10/2014 22:32:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>03/10/2014 22:32:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/10/2014 22:32:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>10/02/2013 19:16:03</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/10/2014 22:32:31</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:21</publishTime>
+    </File>
+    <File Include="bin/ru/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:34</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>03/10/2014 22:32:12</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>03/10/2014 22:32:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/10/2014 22:32:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>03/10/2014 22:32:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.OData.dll">
+      <publishTime>03/10/2014 22:32:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>03/10/2014 22:32:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/10/2014 22:32:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/10/2014 22:32:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/10/2014 22:32:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/10/2014 22:32:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/10/2014 22:32:14</publishTime>
+    </File>
+    <File Include="bin/WebActivator.dll">
+      <publishTime>03/10/2014 22:32:37</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/10/2014 22:32:40</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>03/10/2014 22:32:14</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>03/10/2014 22:32:16</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:17</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:21</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:34</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.Edm.resources.dll">
+      <publishTime>03/10/2014 22:32:17</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.OData.resources.dll">
+      <publishTime>03/10/2014 22:32:23</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Spatial.resources.dll">
+      <publishTime>03/10/2014 22:32:35</publishTime>
+    </File>
+    <File Include="Content/app.css">
+      <publishTime>03/15/2014 14:01:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap-responsive-rtl.min.css">
+      <publishTime>10/05/2012 12:54:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap-responsive.css">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-responsive.min.css">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-rtl.min.css">
+      <publishTime>06/19/2014 03:02:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>10/24/2013 16:10:24</publishTime>
+    </File>
+    <File Include="Content/bootstrap.icon-large.css">
+      <publishTime>10/05/2013 20:58:06</publishTime>
+    </File>
+    <File Include="Content/bootstrap.icon-large.min.css">
+      <publishTime>10/05/2013 20:58:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Content/datepicker.css">
+      <publishTime>10/08/2013 21:48:16</publishTime>
+    </File>
+    <File Include="Content/datepicker.less">
+      <publishTime>10/08/2013 21:58:24</publishTime>
+    </File>
+    <File Include="Content/durandal.css">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Content/examples.css">
+      <publishTime>01/28/2014 15:34:35</publishTime>
+    </File>
+    <File Include="Content/ie10mobile.css">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="Content/images/banner_ryd.JPG">
+      <publishTime>10/09/2013 08:38:11</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-halflings-white.png">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons-halflings.png">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Content/images/glyphicons.png">
+      <publishTime>07/17/2012 06:41:12</publishTime>
+    </File>
+    <File Include="Content/images/icon.png">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="Content/images/loading.gif">
+      <publishTime>10/07/2013 16:18:16</publishTime>
+    </File>
+    <File Include="Content/jquery.calendars.picker.css">
+      <publishTime>05/25/2013 10:17:10</publishTime>
+    </File>
+    <File Include="Content/jquery.pnotify.default.css">
+      <publishTime>10/27/2013 05:13:49</publishTime>
+    </File>
+    <File Include="Content/jquery.pnotify.default.icons.css">
+      <publishTime>06/15/2012 17:57:16</publishTime>
+    </File>
+    <File Include="Content/rtl.css">
+      <publishTime>10/05/2012 12:54:40</publishTime>
+    </File>
+    <File Include="Content/toastr.css">
+      <publishTime>10/02/2013 19:16:08</publishTime>
+    </File>
+    <File Include="Content/toastr.min.css">
+      <publishTime>10/02/2013 19:16:08</publishTime>
+    </File>
+    <File Include="DMSDataSet.xsc">
+      <publishTime>06/16/2014 21:31:04</publishTime>
+    </File>
+    <File Include="DMSDataSet.xss">
+      <publishTime>06/16/2014 21:31:04</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>10/02/2013 19:15:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/02/2013 19:15:56</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/04/2013 06:45:06</publishTime>
+    </File>
+    <File Include="reports/rView.aspx">
+      <publishTime>06/16/2014 21:31:06</publishTime>
+    </File>
+    <File Include="reports/WebForm1.aspx">
+      <publishTime>06/16/2014 21:31:05</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datepicker.js">
+      <publishTime>11/02/2013 07:05:59</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>10/02/2013 19:16:07</publishTime>
+    </File>
+    <File Include="Scripts/breeze.debug.js">
+      <publishTime>09/12/2013 07:02:29</publishTime>
+    </File>
+    <File Include="Scripts/breeze.min.js">
+      <publishTime>09/12/2013 07:02:31</publishTime>
+    </File>
+    <File Include="Scripts/breeze.savequeuing.js">
+      <publishTime>08/15/2013 21:15:40</publishTime>
+    </File>
+    <File Include="Scripts/es5-sham.map">
+      <publishTime>11/28/2013 08:26:52</publishTime>
+    </File>
+    <File Include="Scripts/es5-sham.min.js">
+      <publishTime>11/28/2013 08:26:52</publishTime>
+    </File>
+    <File Include="Scripts/es5-shim.map">
+      <publishTime>11/28/2013 08:26:52</publishTime>
+    </File>
+    <File Include="Scripts/es5-shim.min.js">
+      <publishTime>11/28/2013 08:26:52</publishTime>
+    </File>
+    <File Include="Scripts/excelconvert.js">
+      <publishTime>10/25/2013 20:30:34</publishTime>
+    </File>
+    <File Include="Scripts/helper.js">
+      <publishTime>12/12/2015 16:32:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>10/02/2013 19:16:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>01/28/2014 15:34:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.map">
+      <publishTime>10/02/2013 19:16:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery.blockui.js">
+      <publishTime>10/07/2013 18:40:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars-ar-EG.js">
+      <publishTime>06/27/2011 23:18:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars.islamic-ar.js">
+      <publishTime>11/02/2013 07:00:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars.islamic.min.js">
+      <publishTime>05/25/2013 10:02:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars.min.js">
+      <publishTime>05/25/2013 10:05:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars.picker-ar.js">
+      <publishTime>11/20/2009 19:46:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars.picker.min.js">
+      <publishTime>05/25/2013 10:03:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery.calendars.plus.min.js">
+      <publishTime>05/25/2013 10:07:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.flot.categories.js">
+      <publishTime>01/31/2014 02:32:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.flot.js">
+      <publishTime>01/28/2014 15:34:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.flot.orderBars.js">
+      <publishTime>01/28/2014 15:34:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.flot.pie.js">
+      <publishTime>01/31/2014 02:32:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.form.js">
+      <publishTime>10/09/2013 07:54:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery.pnotify.js">
+      <publishTime>06/15/2012 17:57:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.pnotify.min.js">
+      <publishTime>06/15/2012 17:57:20</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.1.debug.js">
+      <publishTime>10/02/2013 19:16:05</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.1.js">
+      <publishTime>10/02/2013 19:16:05</publishTime>
+    </File>
+    <File Include="Scripts/knockout.validation.js">
+      <publishTime>10/27/2013 07:20:21</publishTime>
+    </File>
+    <File Include="Scripts/knockout.validation.min.js">
+      <publishTime>10/27/2013 07:20:21</publishTime>
+    </File>
+    <File Include="Scripts/knockout.validation.min.js.map">
+      <publishTime>10/05/2013 07:57:22</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>10/02/2013 19:16:00</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>10/02/2013 19:16:09</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>10/02/2013 19:16:09</publishTime>
+    </File>
+    <File Include="Scripts/q.js">
+      <publishTime>08/15/2013 21:15:41</publishTime>
+    </File>
+    <File Include="Scripts/q.min.js">
+      <publishTime>08/15/2013 21:15:41</publishTime>
+    </File>
+    <File Include="Scripts/sammy-0.7.4.js">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="Scripts/sammy-0.7.4.min.js">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="Scripts/string.js">
+      <publishTime>10/24/2013 21:56:16</publishTime>
+    </File>
+    <File Include="Scripts/toastr.js">
+      <publishTime>10/02/2013 19:16:08</publishTime>
+    </File>
+    <File Include="Scripts/toastr.min.js">
+      <publishTime>10/02/2013 19:16:08</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="Views/Default/index.cshtml">
+      <publishTime>01/31/2014 07:04:11</publishTime>
+    </File>
+    <File Include="Views/Default/ReportViewer.cshtml">
+      <publishTime>06/16/2014 21:31:08</publishTime>
+    </File>
+    <File Include="Views/Default/_barchart.cshtml">
+      <publishTime>01/31/2014 02:31:54</publishTime>
+    </File>
+    <File Include="Views/Default/_login.cshtml">
+      <publishTime>11/27/2013 22:17:28</publishTime>
+    </File>
+    <File Include="Views/Default/_splash.cshtml">
+      <publishTime>10/04/2013 13:37:04</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>10/02/2013 19:16:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/12/2015 21:50:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,94 @@
+﻿<div id="department">
+    <div id="bodydepartment">
+        <div class="tabbable">
+            <!-- Only required for left/right tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">الإدارات الداخليه</a>
+                </li>
+                <li><a href="#tab2" data-toggle="tab">الإدارات الخارجيه</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <a class="btn btn-primary" data-toggle="modal" href="#modalAddDepartment" data-bind="click: openAddDepartmentModal.bind(1)" style="float: left">إضافة إداره داخليه<i class="icon-plus icon-white" style="vertical-align: text-bottom"></i></a>
+                    <div class="tree well">
+                        <ul data-bind="foreach: internalDepartmentsTree">
+                            <li>
+                                <div>
+                                    <i data-bind="attr: { class: Department1().length > 0 ? 'icon-minus-sign' : 'icon-minus' }" style="margin-top: 3px;"></i>
+                                    <span data-bind="text: Name"></span>
+                                    <a style="float:left; border-right: 1px solid #ccc; padding-right:5px;" data-toggle="modal" href="#modalAddDepartment" data-bind="click: $root.addNewDept.bind(1) "><i class="icon-plus" style=" margin-top:2px;"></i></a>
+                                    <a style="float:left;border-right: 1px solid #ccc; padding-right:5px;" data-toggle="modal" href="#modalEditDepartment" data-bind="click: $root.openEditDepartment.bind(1)"><i class="icon-edit" style="margin-left:10px; margin-right:10px; margin-top: 2px;"></i></a>
+                                    <span style="float:left;" >
+                                        <input type="checkbox" data-bind="checked: Active" style="margin-left:5px;" />
+                                     </span>
+                                </div>
+                                <!--ko if: Department1().length > 0 -->
+                                <ul data-bind="template: { name: 'department-template', foreach: Department1 }">
+                                </ul>
+
+                                <!--/ko-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <a class="btn btn-primary" data-toggle="modal" href="#modalAddDepartment" data-bind="click: openAddDepartmentModal.bind(2)" style="float: left">إضافة إداره خارجيه<i class="icon-plus icon-white" style="vertical-align: text-bottom"></i></a>
+                    <div class="well">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>اسم الادارة</th>
+                                    <th>فعال</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: externalDepartments">
+                                <tr>
+                                    <td data-bind="text: Name"></td>
+                                    <td>
+                                        <input type="checkbox" data-bind="checked: Active" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal hide fade" id="modalAddDepartment" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close" id="closemodalAddDepartment" data-dismiss="modal">x</button>
+        <h3>إضافة إداره</h3>
+    </div>
+    <div class="modal-body">
+        <div class="control-group" data-bind="css: { 'error': !name.isValid() }">
+            <label class="control-label">إسم الادارة: </label>
+            <input class="input-large" type="text" data-bind="value: name" placeholder="إسم الادارة">
+        </div>
+        <!-- ko if: selectedType() == 1-->
+        <label class="control-label">الإدارة الرئيسية : </label>
+        <select class="span3" data-placeholder="Choose a Category" tabindex="1" data-bind="options: internalDepartmentsList, optionsText: 'Name', value: selectedNameParentType, optionsCaption: 'Choose...'">
+        </select>
+        <!--/ko-->
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: saveDepartment">حفظ<i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>
+<div class="modal hide fade" id="modalEditDepartment" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close" id="closeEditDepartment" data-dismiss="modal">x</button>
+        <h3>إضافة إداره</h3>
+    </div>
+    <div class="modal-body">
+        <div class="control-group" data-bind="css: { 'error': !name1.isValid() }">
+            <label class="control-label">إسم الادارة: </label>
+            <input class="input-large" type="text" data-bind="value: name1" placeholder="إسم الادارة">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: editDepartment">حفظ<i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+﻿<nav class="navbar navbar-fixed-top">
+    <div class="navbar-inner" style="height:60px;">
+        <a class="brand" href="/">
+            <span class="title">نظام إدارةالوثائق</span>
+        </a>
+
+        <!--<img src="../../Content/images/banner_ryd.JPG" />-->
+        <!--<img src="../DMS/Content/images/banner_ryd.JPG" />-->
+
+        <div class="loader pull-right" data-bind="css: { active: router.isNavigating }">
+            تحميل...
+            <div class="progress progress-striped active page-progress-bar">
+                <div class="bar" style="width: 100%;"></div>
+            </div>
+        </div>
+        <!-- <div class="btn-group" data-bind="foreach: router.visibleRoutes">
+            <a data-bind="css: { active: isActive }, attr: { href: hash }, text: name"
+                class="btn btn-info" href="#"></a>
+        </div>-->
+        <div style="float: left;">
+            <div class="btn-group" style="float: left;">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <span data-bind="text: user().Name()" style="display: inline-block; width: 100px;"></span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu left" role="menu">
+                    <li><a data-toggle="modal" href="#changePasswordModal" data-bind="click: openChangePasswordModal">تغيير كلمة المرور</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">
+                        <i class="icon-signout"></i>
+                        <span class="title">خروج</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="btn-group" style="float: left;">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="float: left; margin-left: 5px;" data-bind="click: openNotificationPanel">
+                    <i class="icon-bell" style="vertical-align: text-bottom;"></i>
+                    <!--ko if: unreadNotificationCount() > 0 -->
+                    <span class="badge badge-warning" style="position: absolute; right: -15px; top: -10px;" data-bind="text: unreadNotificationCount">4</span>
+                    <!--/ko-->
+                </button>
+                <div class="dropdown-menu left" style="width: 400px;">
+                    <div class="notification-header">
+                        إشعارات
+                    </div>
+                    <div id='notificationList' data-bind="foreach: notificationList" style="max-height: 400px; overflow-y: auto;">
+                        <div class=".notification-item" data-bind="css: { 'not-read': !Read() }, event: { mouseover: $root.showMarkRead, mouseout: $root.hideMarkRead }">
+                            <a data-bind="attr: { href: NavigateTo }">
+                                <div data-bind="text: Text"></div>
+                                <div class="date">
+                                    <i class="icon-time"></i><span data-bind="text: DateTime" style="margin-right: 2px;"></span>
+                                </div>
+                                <!--ko if: !Read() -->
+                                <span class="mark-read" title="تم العلم" data-bind="click: $root.markAsRead">
+                                    <i class="icon-ok-sign"></i>
+                                </span>
+                                <!--/ko-->
+                            </a>
+                        </div>
+                    </div>
+                    <div id="loadNotification" style="height: 30px; margin-top: 10px; padding-right: 50px; margin-bottom: 10px;">
+                        <!--ko if: currentPageIndex() != -1 && !notificationsLoading() -->
+                        <button type="button" class="btn" style="width: 300px;" data-bind="click: getNotificationNextPage">المزيد</button>
+                        <!--/ko-->
+                    </div>
+                    <div class="notification-footer" style="height: 20px;">
+                    </div>
+                </div>
+            </div>
+            <form id="logoutForm" method="post" action="Default/LogOut">
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="modal hide fade" id="changePasswordModal">
+    <div class="modal-header">
+        <button id="closeChangePassword" type="button" class="close" data-dismiss="modal">x</button>
+        <h3><i class="icon-user" style="vertical-align: baseline; margin-left: 5px;"></i>
+            <span>تغيير كلمة المرور</span>
+        </h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="span12 ">
+                <label class="control-label" style="margin-right:0px;">كلمة المرور الحاليه</label>
+                <div class="control-group" data-bind="css: { 'error': !changePasswordModel().currentPassword.isValid() }">
+                    <input type="password" class="span3" data-bind="value: changePasswordModel().currentPassword" />
+                </div>
+            </div>
+            <div class="span12" style="margin-right:0px;">
+                <label class="control-label">كلمة المرور الجديده</label>
+                <div class="control-group" data-bind="css: { 'error': !changePasswordModel().newPassword.isValid() }">
+                    <input type="password" class="span3" data-bind="value: changePasswordModel().newPassword" />
+                </div>
+            </div>
+            <div class="span12 " style="margin-right:0px;">
+                <label class="control-label">تأكيد كلمة المرور</label>
+                <div class="control-group" data-bind="css: { 'error': !changePasswordModel().confirmPassword.isValid() }">
+                    <input type="password" class="span3" data-bind="value: changePasswordModel().confirmPassword" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: changePassword">حفظ<i class="icon-ok icon-white" style="vertical-align: text-bottom; margin-left:2px;"></i></button>
+    </div>
+</div>

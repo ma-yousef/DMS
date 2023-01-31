@@ -1,0 +1,98 @@
+2011-07-19 04:30:41,812 [6] ERROR MonoX [nzgrub] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2011-07-19 07:27:04,906 [11] ERROR MonoX [118.90.54.149] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2011-07-19 07:27:25,609 [10] ERROR MonoX [118.90.54.149] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2011-07-19 07:27:34,046 [10] ERROR MonoX [118.90.54.149] - Error
+System.Security.SecurityException: Security error.
+   at MonoSoftware.MonoX.BasePage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+The Zone of the assembly that failed was:
+MyComputer
+2011-07-19 07:27:53,171 [7] ERROR MonoX [118.90.54.149] - Error
+System.Security.SecurityException: Security error.
+   at MonoSoftware.MonoX.BasePage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+The Zone of the assembly that failed was:
+MyComputer
+2011-07-19 08:00:32,625 [12] ERROR MonoX [118.90.54.149] - Error
+System.Security.SecurityException: Security error.
+   at MonoSoftware.MonoX.BasePage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+The Zone of the assembly that failed was:
+MyComputer
+2011-07-19 08:08:08,375 [7] ERROR MonoX [118.90.54.149] - Error
+System.Security.SecurityException: Security error.
+   at MonoSoftware.MonoX.BasePage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+The Zone of the assembly that failed was:
+MyComputer
+2011-07-19 08:19:30,500 [1] ERROR MonoX [118.90.54.149] - Error
+System.Security.SecurityException: Security error.
+   at MonoSoftware.MonoX.BasePage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+The Zone of the assembly that failed was:
+MyComputer
+2011-07-19 08:57:22,937 [12] ERROR MonoX [217.249.130.164] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2011-07-19 08:57:23,234 [1] ERROR MonoX [217.249.130.164] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2011-07-19 11:10:32,562 [11] ERROR MonoX [admin] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2011-07-19 15:45:53,093 [1] ERROR MonoX [89.172.194.86] - Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MonoSoftware.MonoX.Pages.Blog.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at MonoSoftware.MonoX.BasePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

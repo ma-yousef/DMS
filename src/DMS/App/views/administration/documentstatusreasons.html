@@ -1,0 +1,36 @@
+﻿<div id="docstatusreason">
+    <div id="bodydepartment" class="well">
+        <div data-bind="foreach: documentstatus">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-bind="attr: { href: '#div' + Id() }">
+                        <span data-bind="text: Name"></span>
+                    </a>
+                </div>
+                <div data-bind="attr: { id: 'div' + Id() }" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="form-inline">
+                                            <input type="text" placeholder="سبب جديد" data-bind="attr:{ id: 'input'+Id()}" />
+                                            <button type="button" class="btn btn-success" data-bind="click: $root.addReason">إضافه<i class="icon-plus icon-white"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: DocumentStatusReason">
+                                <tr>
+                                    <td data-bind="text: Reason" style="width:70%"></td>
+                                    <td>
+                                        <input type="checkbox" data-bind="checked: Active"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

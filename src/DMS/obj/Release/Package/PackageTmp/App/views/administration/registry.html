@@ -1,0 +1,52 @@
+﻿<div id="documenttype">
+    <div class="btn-toolbar well">
+    <div class="control-group" data-bind="css: { 'error': !name.isValid() }">
+        <label class="control-label">إسم السجل: </label>
+        <input type="text" data-bind="value: name">
+    </div>
+        
+    <div>
+        <button type="button" class="btn btn-primary" data-bind="click: saveRegistry" style="padding-top:5px;"><i class="icon-plus icon-white"></i> حفظ </button>
+    </div>
+        </div>
+    <div id="bodydepartment">
+        <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th >رقم السجل</th>
+                    <th>إسم السجل</th>
+                    <th>الفاعلية</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: registryList">
+                <tr>
+                    <td data-bind="text: Id"></td>
+                    <td data-bind="text: Name"></td>
+                    <td><input type="checkbox" data-bind="checked: Active" ></td>
+                    <td>
+                    <a data-toggle="modal" class="btn" href="#modalEditRegistry" data-bind="click: $root.openEditRegistry"><i class="icon-edit" style="margin-right: 5px; margin-top: 2px;"></i></a>
+                </td>
+                </tr>
+             </tbody>
+        </table>
+            </div>
+    </div>
+
+</div>
+<div class="modal hide fade" id="modalEditRegistry" style="width: 650px;">
+    <div class="modal-header">
+        <button type="button" class="close" id="closemodalAddUser" data-dismiss="modal">x</button>
+    </div>
+    <div class="modal-body">
+        <div class="control-group" data-bind="css: { 'error': !name1.isValid() }">
+                <label class="control-label">اسم الإجراء: </label>
+                <div class="controls">
+                    <input type="text" data-bind="value: name1">
+                </div >
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-bind="click: editRegistry">حفظ<i class="icon-ok icon-white" style="vertical-align: text-bottom"></i></button>
+    </div>
+</div>
